@@ -38,5 +38,5 @@ public class Record {
     private LocalTime time;
 
     @OneToOne(mappedBy = "recordId")
-    private Review review;
+    private Feedback feedback;
 }

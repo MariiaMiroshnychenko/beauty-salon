@@ -60,8 +60,8 @@
                 </div>
 
             <li class="nav-item active">
-                <a href="${pageContext.request.contextPath}/salon/client/review?language=${sessionScope.language}"
-                   class="nav-link">To write review</a>
+                <a href="${pageContext.request.contextPath}/salon/client/feedback?language=${sessionScope.language}"
+                   class="nav-link">To write feedback</a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

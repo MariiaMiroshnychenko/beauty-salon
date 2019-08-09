@@ -24,7 +24,7 @@
 //        UserService userService = new UserServiceImpl();
 //        LanguageService languageService = new LanguageServiceImpl();
 //        ProcedureService procedureService = new ProcedureServiceImpl();
-//        ReviewService reviewService = new ReviewServiceImpl();
+//        FeedbackService reviewService = new FeedbackServiceImpl();
 //
 //        List<Record> records = recordService.findRecordsByUserId(user.getId(), user.getRole());
 //
@@ -45,7 +45,7 @@
 //                }
 //        );
 //        request.setAttribute("recordsWithoutFeedback", uncheckedRecords);
-//        return "/WEB-INF/view/client/review.jsp";
+//        return "/WEB-INF/view/client/feedback.jsp";
 //    }
 //
 //    @Override

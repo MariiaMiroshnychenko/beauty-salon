@@ -40,10 +40,10 @@ public class User implements UserDetails {
     private List<Record> masterRecords;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "clientId")
-    private List<Review> clientReviews;
+    private List<Feedback> clientFeedbacks;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "masterId")
-    private List<Review> masterReviews;
+    private List<Feedback> masterFeedbacks;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

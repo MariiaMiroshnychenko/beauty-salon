@@ -10,7 +10,7 @@ public abstract class FactoryDao {
     public abstract LanguageDao languageDao();
     public abstract ProcedureDao procedureDao();
     public abstract RecordDao recordDao();
-    public abstract ReviewDao reviewDao();
+    public abstract FeedbackDao reviewDao();
     public abstract ScheduleDao scheduleDao();
     public abstract UserDao userDao();
 

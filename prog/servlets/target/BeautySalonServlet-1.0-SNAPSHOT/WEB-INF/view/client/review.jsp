@@ -58,7 +58,7 @@
             </li>
 
             <li class="nav-item active">
-                <a href="${pageContext.request.contextPath}/salon/client/review?language=${sessionScope.language}" class="nav-link">To write review</a>
+                <a href="${pageContext.request.contextPath}/salon/client/feedback?language=${sessionScope.language}" class="nav-link">To write feedback</a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -69,7 +69,7 @@
             <li class="nav-item">
                 <a class="nav-link">
                 <form method="get"
-                      action="${pageContext.request.contextPath}/salon/client/review">
+                      action="${pageContext.request.contextPath}/salon/client/feedback">
                     <label for="language"></label>
 
                     <select id="language" name="language"
@@ -93,7 +93,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="column">
-            <h5 style="padding: 20px 375px">You have procedures without your review. Please, leave your
+            <h5 style="padding: 20px 375px">You have procedures without your feedback. Please, leave your
                 feedback for it!</h5>
         </div>
     </div>
@@ -103,7 +103,7 @@
         <div class="column" style="width: 55%">
             <c:forEach var="record" items="${requestScope.recordsWithoutFeedback}">
                 <div class="alert alert-warning alert-dismissable" style="background-color: #f4d3ff">
-                    <form method="post" action="${pageContext.request.contextPath}/salon/client/review-submit">
+                    <form method="post" action="${pageContext.request.contextPath}/salon/client/feedback-submit">
                         <a href="#" class="close" data-dismiss="alert" aria-label="Close">&times;</a>
                         <i>Visit date:</i> <strong>${record.recordDate}</strong>
                             <i>Procedure:</i> <strong>${record.procedure.name}</strong>

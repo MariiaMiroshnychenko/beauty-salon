@@ -21,7 +21,7 @@ public class PageReview implements Command {
         UserService userService = new UserServiceImpl();
         LanguageService languageService = new LanguageServiceImpl();
         ProcedureService procedureService = new ProcedureServiceImpl();
-        ReviewService reviewService = new ReviewServiceImpl();
+        FeedbackService feedbackService = new FeedbackServiceImpl();
 
         List<Record> records = recordService.findRecordsByUserId(user.getId(), user.getRole());
 
@@ -36,7 +36,7 @@ public class PageReview implements Command {
         List<Record> uncheckedRecords = new ArrayList<>();
 
         records.forEach(record -> {
-                    if (Objects.isNull(reviewService.findReviewByRecordId(record.getId()))) {
+                    if (Objects.isNull(feedbackService.findReviewByRecordId(record.getId()))) {
                         uncheckedRecords.add(record);
                     }
                 }

@@ -25,8 +25,8 @@ public class JdbcFactoryDao extends FactoryDao {
     }
 
     @Override
-    public ReviewDao reviewDao() {
-        return new ReviewJdbcDao(getConnection());
+    public FeedbackDao reviewDao() {
+        return new FeedbackJdbcDao(getConnection());
     }
 
     @Override

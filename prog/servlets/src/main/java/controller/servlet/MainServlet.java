@@ -7,8 +7,8 @@ import controller.command.impl.client.PageReview;
 import controller.command.impl.Registration;
 import controller.command.impl.Authorization;
 import controller.command.impl.admin.AdminPageRecord;
-import controller.command.impl.admin.AdminPageReview;
-import controller.command.impl.admin.AdminPageReviewSelection;
+import controller.command.impl.admin.AdminPageFeedback;
+import controller.command.impl.admin.AdminPageMasterSelection;
 import controller.command.impl.client.ClientAppointment;
 import controller.command.impl.client.ClientFutureRecordPage;
 import controller.command.impl.client.ClientPastRecordPage;
@@ -43,8 +43,8 @@ public class MainServlet extends HttpServlet {
         commands.put("make-appointment-confirm", new ClientAppointmentConfirm());
         commands.put("make-appointment-success", new ClientAppointmentSubmit());
         commands.put("master-records", new AdminPageRecord());
-        commands.put("master-reviews", new AdminPageReview());
-        commands.put("master-submit", new AdminPageReviewSelection());
+        commands.put("master-feedback", new AdminPageFeedback());
+        commands.put("master-submit", new AdminPageMasterSelection());
         commands.put("schedule", new MasterPageSchedule());
     }
 

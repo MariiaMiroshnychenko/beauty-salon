@@ -3,6 +3,7 @@ package model.entity;
 import java.util.Objects;
 
 public class Schedule {
+    private Integer id;
     private Integer masterId;
     private Boolean sunday;
     private Boolean monday;
@@ -14,8 +15,9 @@ public class Schedule {
 
     private User master;
 
-    public Schedule(Integer masterId, Boolean sunday, Boolean monday, Boolean tuesday,
+    public Schedule(Integer id, Integer masterId, Boolean sunday, Boolean monday, Boolean tuesday,
                     Boolean wednesday, Boolean thursday, Boolean friday, Boolean saturday, User master) {
+        this.id = id;
         this.masterId = masterId;
         this.sunday = sunday;
         this.monday = monday;
@@ -27,8 +29,9 @@ public class Schedule {
         this.master = master;
     }
 
-    public Schedule(Integer masterId, Boolean sunday, Boolean monday, Boolean tuesday,
+    public Schedule(Integer id, Integer masterId, Boolean sunday, Boolean monday, Boolean tuesday,
                     Boolean wednesday, Boolean thursday, Boolean friday, Boolean saturday) {
+        this.id = id;
         this.masterId = masterId;
         this.sunday = sunday;
         this.monday = monday;
@@ -40,6 +43,14 @@ public class Schedule {
     }
 
     public Schedule() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getMasterId() {
@@ -119,7 +130,8 @@ public class Schedule {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Schedule schedule = (Schedule) o;
-        return Objects.equals(masterId, schedule.masterId) &&
+        return Objects.equals(id, schedule.id) &&
+                Objects.equals(masterId, schedule.masterId) &&
                 Objects.equals(sunday, schedule.sunday) &&
                 Objects.equals(monday, schedule.monday) &&
                 Objects.equals(tuesday, schedule.tuesday) &&
@@ -132,6 +144,6 @@ public class Schedule {
 
     @Override
     public int hashCode() {
-        return Objects.hash(masterId, sunday, monday, tuesday, wednesday, thursday, friday, saturday, master);
+        return Objects.hash(id, masterId, sunday, monday, tuesday, wednesday, thursday, friday, saturday, master);
     }
 }

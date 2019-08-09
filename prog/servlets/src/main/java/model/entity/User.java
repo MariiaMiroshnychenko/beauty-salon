@@ -14,7 +14,7 @@ public class User {
 
     private Schedule schedule;
     private List<Record> records;
-    private List<Review> reviews;
+    private List<Feedback> feedbacks;
 
     public User(Integer id, String name, String surname, String email,
                 String role, String username, String password) {
@@ -111,12 +111,12 @@ public class User {
         this.records = records;
     }
 
-    public List<Review> getReviews() {
-        return reviews;
+    public List<Feedback> getFeedbacks() {
+        return feedbacks;
     }
 
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
+    public void setFeedbacks(List<Feedback> feedbacks) {
+        this.feedbacks = feedbacks;
     }
 
     @Override
@@ -133,11 +133,11 @@ public class User {
                 Objects.equals(password, user.password) &&
                 Objects.equals(schedule, user.schedule) &&
                 Objects.equals(records, user.records) &&
-                Objects.equals(reviews, user.reviews);
+                Objects.equals(feedbacks, user.feedbacks);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, surname, email, role, username, password, schedule, records, reviews);
+        return Objects.hash(id, name, surname, email, role, username, password, schedule, records, feedbacks);
     }
 }

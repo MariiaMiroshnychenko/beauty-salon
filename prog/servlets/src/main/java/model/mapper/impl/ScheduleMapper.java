@@ -10,6 +10,7 @@ import java.util.Map;
 public class ScheduleMapper implements MainMapper<Schedule> {
     @Override
     public Schedule extractFromResultSet(ResultSet resultSet) throws SQLException {
+        Integer id = resultSet.getInt("id");
         Integer masterId = resultSet.getInt("master_id");
         Boolean sunday = resultSet.getBoolean("sunday");
         Boolean monday = resultSet.getBoolean("monday");
@@ -19,7 +20,7 @@ public class ScheduleMapper implements MainMapper<Schedule> {
         Boolean friday = resultSet.getBoolean("friday");
         Boolean saturday = resultSet.getBoolean("saturday");
 
-        return new Schedule(masterId, sunday, monday, tuesday, wednesday, thursday, friday, saturday);
+        return new Schedule(id, masterId, sunday, monday, tuesday, wednesday, thursday, friday, saturday);
     }
 
     @Override

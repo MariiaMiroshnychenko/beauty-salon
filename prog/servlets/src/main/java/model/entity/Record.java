@@ -15,11 +15,11 @@ public class Record {
     private User master;
     private Procedure procedure;
     private User client;
-    private Review review;
+    private Feedback feedback;
 
     public Record(Integer id, Integer masterId, Integer procedureId,
                   LocalDate recordDate, LocalTime time, Integer clientId,
-                  User master, Procedure procedure, User client, Review review) {
+                  User master, Procedure procedure, User client, Feedback feedback) {
         this.id = id;
         this.masterId = masterId;
         this.procedureId = procedureId;
@@ -29,7 +29,7 @@ public class Record {
         this.master = master;
         this.procedure = procedure;
         this.client = client;
-        this.review = review;
+        this.feedback = feedback;
     }
 
     public Record(Integer id, Integer masterId, Integer procedureId,
@@ -125,12 +125,12 @@ public class Record {
         this.client = client;
     }
 
-    public Review getReview() {
-        return review;
+    public Feedback getFeedback() {
+        return feedback;
     }
 
-    public void setReview(Review review) {
-        this.review = review;
+    public void setFeedback(Feedback feedback) {
+        this.feedback = feedback;
     }
 
     @Override
@@ -147,11 +147,11 @@ public class Record {
                 Objects.equals(master, record.master) &&
                 Objects.equals(procedure, record.procedure) &&
                 Objects.equals(client, record.client)&&
-                Objects.equals(review, record.review);
+                Objects.equals(feedback, record.feedback);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, masterId, procedureId, recordDate, time, clientId, master, procedure, client, review);
+        return Objects.hash(id, masterId, procedureId, recordDate, time, clientId, master, procedure, client, feedback);
     }
 }

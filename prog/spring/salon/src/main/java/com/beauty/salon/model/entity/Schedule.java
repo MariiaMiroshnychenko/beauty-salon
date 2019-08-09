@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @AllArgsConstructor
@@ -16,8 +17,11 @@ import java.util.List;
 @Table(name = "schedule")
 public class Schedule {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     @OneToOne
-    @JoinColumn(referencedColumnName = "id")
+    @JoinColumn(name = "master_id")
     private User masterId;
 
     private Boolean sunday;

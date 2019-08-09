@@ -79,7 +79,7 @@
         <div class="column"></div>
         <div class="menu">
             <ul>
-                <li><a href="${pageContext.request.contextPath}/salon/admin/master-reviews"><span
+                <li><a href="${pageContext.request.contextPath}/salon/admin/master-feedback"><span
                         class="fa fa-book"></span>Reviews</a></li>
                 <li>
                     <a href="${pageContext.request.contextPath}/salon/admin/master-records?date=${sessionScope.availableDate}"><span

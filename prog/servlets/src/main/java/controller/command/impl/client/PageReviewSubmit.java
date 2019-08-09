@@ -1,10 +1,10 @@
 package controller.command.impl.client;
 
 import controller.command.Command;
-import model.entity.Review;
+import model.entity.Feedback;
 import model.entity.User;
-import model.service.ReviewService;
-import model.service.impl.ReviewServiceImpl;
+import model.service.FeedbackService;
+import model.service.impl.FeedbackServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
@@ -16,9 +16,9 @@ public class PageReviewSubmit implements Command{
     @Override
     public String execute(HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("user");
-        ReviewService reviewService = new ReviewServiceImpl();
+        FeedbackService feedbackService = new FeedbackServiceImpl();
 
-        reviewService.create(new Review(user.getId(),
+        feedbackService.create(new Feedback(user.getId(),
                 Integer.valueOf(request.getParameter("masterId")),
                 Integer.valueOf(request.getParameter("recordId")),
                 request.getParameter("reviewText"),

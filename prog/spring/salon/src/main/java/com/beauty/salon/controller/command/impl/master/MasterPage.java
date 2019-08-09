@@ -1,19 +1,19 @@
 package com.beauty.salon.controller.command.impl.master;
 
-import controller.command.Command;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
-public class MasterPage implements Command {
+@Controller
+@RequestMapping("/master")
+public class MasterPage {
     private String[] hasAuthority = {"master"};
-    @Override
-    public String execute(HttpServletRequest request) {
-        return "/WEB-INF/view/master/masterSchedule.jsp";
-    }
 
-    @Override
-    public boolean checkAuthority(String role) {
-        return Arrays.asList(hasAuthority).contains(role);
+    @GetMapping
+    public String getMasterPage() {
+        return "masterSchedule";
     }
 }

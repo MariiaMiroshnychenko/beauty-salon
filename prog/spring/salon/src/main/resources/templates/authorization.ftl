@@ -1,44 +1,49 @@
-<!DOCTYPE html>
-<#assign language= <#if"${ empty param.language ? param.language : not empty language ? language : 'en'}"
-       scope="session"/>
-<fmt:setLocale value="${language}"/>
-<fmt:setBundle basename="message"/>
-
+<#import "parts/part-style.ftl" as style>
 <!doctype html>
-<html lang="${language}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Authorization</title>
+    <title>${rc.getMessage("authorization")}</title>
     <link rel="icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://localhost:8080/css/style.css" media="screen" type="text/css"/>
+    <link rel='stylesheet' href='http://localhost:8081/static/css/style.css' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <@style.style/>
 </head>
 
 <body>
 
 <div align="right">
-    <form method="get"
-          action="${pageContext.request.contextPath}">
-        <label for="language"></label>
-
-        <select id="language" name="language"
-                onchange="submit()" style="font-size: 11pt">
-            <option value="en" ${language == 'en' ? 'selected' : ''}><fmt:message key="label.lang.en"/></option>
-            <option value="uk" ${language == 'uk' ? 'selected' : ''}><fmt:message key="label.lang.uk"/></option>
+        <select id="locales" name="lang" style="font-size: 11pt">
+        <option value="">${rc.getMessage("change.language")}</option>
+        <option value="en">${rc.getMessage("label.lang.en")}</option>
+        <option value="uk">${rc.getMessage("label.lang.uk")}</option>
         </select>
-    </form>
 </div>
 <div id="login-form">
-    <h1>АВТОРИЗАЦИЯ</h1>
+    <h1>${rc.getMessage("authorization")}</h1>
     <fieldset>
-        <form method="post" action="${pageContext.request.contextPath}/salon">
-            <input type="text" name="username" placeholder="username" required>
-            <input type="password" name="password" placeholder="password" required>
-            <input type="submit" value="ВОЙТИ">
+        <form method="post" action="/login">
+            <input type="text" name="username" placeholder="${rc.getMessage("username")}" required>
+            <input type="password" name="password" placeholder="${rc.getMessage("password")}" required>
+
+            <input type="hidden" name="_csrf" value="${_csrf.token}">
+            <input type="submit" value="${rc.getMessage("sign.in")}">
         </form>
-        Don't you have an account? <a href="${pageContext.request.contextPath}/registration" data-toggle="modal" data-target="#myModal">Sign up</a>
+    ${rc.getMessage("no.account")} <a href="/registration">${rc.getMessage("sign.up")}</a>
     </fieldset>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#locales").change(function () {
+            var selectedOption = $('#locales').val();
+            if (selectedOption != ''){
+                window.location.replace('?lang=' + selectedOption);
+            }
+        });
+    });
+</script>
 </body>
 </html>

@@ -77,7 +77,7 @@
     <div class="column">
         <div class="menu">
             <ul>
-                <li><a href="${pageContext.request.contextPath}/salon/admin/master-reviews"><span
+                <li><a href="${pageContext.request.contextPath}/salon/admin/master-feedback"><span
                         class="fa fa-book"></span>Reviews</a>
                 </li>
                 <li>

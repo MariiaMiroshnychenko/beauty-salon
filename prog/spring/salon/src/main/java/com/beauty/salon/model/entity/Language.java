@@ -6,13 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "language")
+@Table(name = "language_table")
 public class Language {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +21,6 @@ public class Language {
 
     private String locale;
 
-    @OneToOne(mappedBy = "languageId")
-    private Procedure procedure;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "languageId")
+    private List<Procedure> procedures;
 }

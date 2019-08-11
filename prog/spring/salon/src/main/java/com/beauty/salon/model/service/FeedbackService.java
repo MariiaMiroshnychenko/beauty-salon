@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface FeedbackService {
     void create(Feedback feedback);
-    Feedback findFeedbackByRecordId(Integer recordId);
-    List<Feedback> findFeedbackByMasterId(Integer masterId);
+//    Feedback findFeedbackByRecordId(Integer recordId);
+    List<Feedback> findFeedbacksByMasterId(Integer masterId);
 }

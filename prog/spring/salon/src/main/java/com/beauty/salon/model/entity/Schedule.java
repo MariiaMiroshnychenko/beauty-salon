@@ -14,14 +14,14 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "schedule")
+@Table(name = "schedule_table")
 public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToOne
-    @JoinColumn(name = "master_id")
+    @ManyToOne
+    @JoinColumn(name = "master_id", nullable = false)
     private User masterId;
 
     private Boolean sunday;

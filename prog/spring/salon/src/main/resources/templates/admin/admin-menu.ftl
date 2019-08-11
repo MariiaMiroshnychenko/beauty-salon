@@ -55,7 +55,7 @@
         <div class="column"></div>
         <div class="menu">
             <ul>
-                <li><a href=""><span
+                <li><a href="/admin/master-feedback"><span
                         class="fa fa-book"></span>${rc.getMessage("feedback")}</a></li>
                 <li>
                     <a href=""><span

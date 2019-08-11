@@ -54,7 +54,7 @@
         <div class="column"></div>
         <div class="menu">
             <ul>
-                <li><a href=""><span
+                <li><a href="/admin/master-feedback"><span
                         class="fa fa-book"></span>${rc.getMessage("feedback")}</a></li>
 
                 <li>
@@ -64,7 +64,7 @@
             </ul>
         </div>
         <div class="column" style="padding: 30px">
-            <form method="get" action="">
+            <form method="get" action="/admin/master-feedback/master-submit">
                 <label for="master">${rc.getMessage("choose.master")}</label>
                 <select id="master" class="form-control" style="width: 250px" name="master">
                     <#list masters as master>
@@ -73,6 +73,7 @@
                 </select>
                 <input type="submit" style="width: 250px" class="form-control">
             </form>
+            <#if reviewsForMaster>
             <table class="table table-bordered" style="background-color: #eeeeee">
                 <thead>
                 <tr>
@@ -92,7 +93,7 @@
                     </tr>
                 </#list>
                 </tbody>
-            </table>
+            </table></#if>
         </div>
     </div>
 </div>

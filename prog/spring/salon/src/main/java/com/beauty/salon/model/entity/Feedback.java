@@ -13,26 +13,25 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "feedback")
+@Table(name = "feedback_table")
 public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(referencedColumnName = "id")
+    @JoinColumn(name = "client_id", nullable = false)
     private User clientId;
 
     @ManyToOne
-    @JoinColumn(referencedColumnName = "id")
+    @JoinColumn(name = "master_id", nullable = false)
     private User masterId;
 
-    @OneToOne
-    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "record_id", nullable = false)
     private Record recordId;
 
     private String text;
 
-    @Column(name = "date_time")
     private LocalDateTime dateTime;
 }

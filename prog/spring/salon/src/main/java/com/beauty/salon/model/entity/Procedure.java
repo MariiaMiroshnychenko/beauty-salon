@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "procedure")
+@Table(name = "procedure_table")
 public class Procedure {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +22,10 @@ public class Procedure {
     private Integer code;
     private String name;
 
-    @OneToOne
-    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "language_id", nullable = false)
     private Language languageId;
 
-    @OneToMany(mappedBy = "procedureId")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "procedureId")
     private List<Record> records;
 }

@@ -7,16 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13796d41-fbb8-46b7-9b2d-997369343847" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2f64ff50-5f44-43ba-8bc8-caea56aba5a2.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2f64ff50-5f44-43ba-8bc8-caea56aba5a2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageMasterSelection.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageMasterSelection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/FeedbackJdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/FeedbackJdbcDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/LanguageJdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/LanguageJdbcDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/ProcedureJdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/ProcedureJdbcDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/RecordJdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/RecordJdbcDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/ScheduleJdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/ScheduleJdbcDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/UserJdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/UserJdbcDao.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminPageMasterSelection.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminPageMasterSelection.class" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/admin/AdminController.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/admin/AdminController.java" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/entity/Feedback.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/entity/Feedback.java" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/entity/Language.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/entity/Language.java" />
@@ -833,7 +823,7 @@
       <workItem from="1565251893957" duration="4185000" />
       <workItem from="1565344347251" duration="5084000" />
       <workItem from="1565423560683" duration="597000" />
-      <workItem from="1565510426046" duration="7673000" />
+      <workItem from="1565510426046" duration="7951000" />
     </task>
     <servers />
   </component>
@@ -870,7 +860,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383035000" />
+    <option name="totallyTimeSpent" value="383313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />

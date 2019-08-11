@@ -1,9 +1,6 @@
 package com.beauty.salon.model.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -15,9 +12,10 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
-@Table(name = "user")
+@Table(name = "user_table")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,20 +28,20 @@ public class User implements UserDetails {
     private String username;
     private String password;
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "masterId")
-    private Schedule schedule;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "clientId")
-    private List<Record> clientRecords;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "masterId")
+    private List<Schedule> schedules;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "masterId")
     private List<Record> masterRecords;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "masterId")
+    private List<Feedback> masterFeedbacks;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "clientId")
     private List<Feedback> clientFeedbacks;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "masterId")
-    private List<Feedback> masterFeedbacks;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "clientId")
+    private List<Record> clientRecords;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

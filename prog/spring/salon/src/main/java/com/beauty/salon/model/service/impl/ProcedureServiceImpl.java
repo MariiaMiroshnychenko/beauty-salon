@@ -29,6 +29,6 @@ public class ProcedureServiceImpl implements ProcedureService {
 
     @Override
     public Procedure findProcedureByCodeAndLocale(Integer procedureCode, String locale) {
-        return procedureRepository.findProceduresByCodeAndLanguageId_Locale(procedureCode, locale);
+        return procedureRepository.findProcedureByCodeAndLanguageId_Locale(procedureCode, locale);
     }
 }

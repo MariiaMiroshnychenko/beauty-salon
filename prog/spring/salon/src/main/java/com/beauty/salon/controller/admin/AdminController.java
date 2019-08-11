@@ -14,11 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,12 +24,15 @@ import java.util.List;
 @RequestMapping("/admin")
 public class AdminController {
     private UserService userService;
+    private FeedbackService feedbackService;
     private AdminService adminService;
 
     @Autowired
     public AdminController(UserServiceImpl userServiceImpl,
+                           FeedbackServiceImpl feedbackServiceImpl,
                            AdminServiceImpl adminServiceImpl) {
         this.userService = userServiceImpl;
+        this.feedbackService = feedbackServiceImpl;
         this.adminService = adminServiceImpl;
     }
 
@@ -45,18 +46,29 @@ public class AdminController {
     }
 
     @GetMapping("/master-feedback")
-    public String getMastersFeedbackPage(@RequestParam(name = "reviewsForMaster", required = false)
-                                                     List<Feedback> reviewsForMaster, Model model) {
+    public String getMastersFeedbackPage(
+            @RequestParam(name = "reviewsForMaster", required = false) List<Feedback> reviewsForMaster,
+                                         Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = (User) authentication.getPrincipal();
 
+        model.addAttribute("admin", user);
         model.addAttribute("masters", userService.findUsersByRole("master"));
-        model.addAttribute("reviewsForMaster", reviewsForMaster);
+        model.addAttribute("reviewsForMaster", reviewsForMaster != null);
 
         return "/admin/admin-feedback";
     }
 
-    @PostMapping("/master-submit")
-    public String submitMasterForFeedbackPage(Integer master, String lang,
-                                              Model model) {
-        return getMastersFeedbackPage(adminService.findFeedbackMasterById(master, lang), model);
+    @GetMapping("/master-feedback/master-submit")
+    public String submitMasterForFeedbackPage(Integer master, String lang, Model model) {
+//        String lang
+//        System.out.println(master);
+//        System.out.println(lang);
+        return getMastersFeedbackPage(adminService.findFeedbacksByMasterId(master, lang), model);
+//        User user = userService.findUserById(master);
+//
+//        model.addAttribute("reviewsForMaster", feedbackService.findFeedbacksByMaster(user));
+//        return "/admin/admin-feedback";
+//        return getMastersFeedbackPage(model);
     }
 }

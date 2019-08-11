@@ -23,13 +23,13 @@ public class FeedbackServiceImpl implements FeedbackService {
         feedbackRepository.saveAndFlush(feedback);
     }
 
-    @Override
-    public Feedback findFeedbackByRecordId(Integer recordId) {
-        return feedbackRepository.findFeedbackByRecordId_Id(recordId);
-    }
+//    @Override
+//    public Feedback findFeedbackByRecordId(Integer recordId) {
+//        return feedbackRepository.findFeedbackByRecordId_Id(recordId);
+//    }
 
     @Override
-    public List<Feedback> findFeedbackByMasterId (Integer masterId) {
-        return feedbackRepository.findFeedbackByMasterId_Id(masterId);
+    public List<Feedback> findFeedbacksByMasterId(Integer masterId) {
+        return feedbackRepository.findAllByMasterId_Id(masterId);
     }
 }

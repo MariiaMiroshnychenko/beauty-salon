@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ProcedureRepository extends JpaRepository<Procedure, Integer> {
     List<Procedure> findProceduresByLanguageId_Locale(String locale);
-    Procedure findProceduresByCodeAndLanguageId_Locale(Integer procedureCode, String locale);
+    Procedure findProcedureByCodeAndLanguageId_Locale(Integer procedureCode, String locale);
 }

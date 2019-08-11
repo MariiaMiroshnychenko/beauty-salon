@@ -55,7 +55,7 @@ public class ScheduleJdbcDao implements ScheduleDao {
 
         String dayOfWeek = LocalDate.parse(date).getDayOfWeek().toString().toLowerCase();
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `schedule` where " + dayOfWeek + " = true")) {
+        try (PreparedStatement statement = connection.prepareStatement("select * from `schedule_table` where " + dayOfWeek + " = true")) {
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {

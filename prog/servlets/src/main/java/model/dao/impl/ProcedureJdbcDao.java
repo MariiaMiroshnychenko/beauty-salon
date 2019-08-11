@@ -50,7 +50,7 @@ public class ProcedureJdbcDao implements ProcedureDao {
     public Procedure findProcedureById(Integer id) {
         Procedure procedure = null;
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `procedure` where id=?")) {
+        try (PreparedStatement statement = connection.prepareStatement("select * from `procedure_table` where id=?")) {
             statement.setInt(1, id);
 
             ResultSet resultSet = statement.executeQuery();

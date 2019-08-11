@@ -21,7 +21,7 @@ public class UserJdbcDao implements UserDao {
 
     @Override
     public void create(User user) {
-        try (PreparedStatement statement = connection.prepareStatement("insert into `user` (name, surname, email, role, username, password) values (?, ?, ?, ?, ?, ?)")) {
+        try (PreparedStatement statement = connection.prepareStatement("insert into `user_table` (name, surname, email, role, username, password) values (?, ?, ?, ?, ?, ?)")) {
             statement.setString(1, user.getName());
             statement.setString(2, user.getSurname());
             statement.setString(3, user.getEmail());
@@ -59,7 +59,7 @@ public class UserJdbcDao implements UserDao {
     public User findUserByUsername(String username) {
         User user = null;
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `user` where username=?")) {
+        try (PreparedStatement statement = connection.prepareStatement("select * from `user_table` where username=?")) {
             statement.setString(1, username);
 
             ResultSet resultSet = statement.executeQuery();
@@ -81,7 +81,7 @@ public class UserJdbcDao implements UserDao {
     public User findUserById(Integer userId) {
         User user = null;
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `user` where id=?")) {
+        try (PreparedStatement statement = connection.prepareStatement("select * from `user_table` where id=?")) {
             statement.setInt(1, userId);
 
             ResultSet resultSet = statement.executeQuery();
@@ -103,7 +103,7 @@ public class UserJdbcDao implements UserDao {
     public List<User> findUsersByRole(String role) {
         List<User> users = new ArrayList<>();
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `user` where role=?")) {
+        try (PreparedStatement statement = connection.prepareStatement("select * from `user_table` where role=?")) {
             statement.setString(1, role);
 
             ResultSet resultSet = statement.executeQuery();

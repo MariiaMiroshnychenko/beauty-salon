@@ -41,7 +41,9 @@ public class AdminPageMasterSelection implements Command {
                 ));
 
         request.setAttribute("reviewsForMaster", reviewsForMasterId);
-        return new AdminPageFeedback().execute(request);
+        request.getSession().setAttribute("masters", userService.findUsersByRole("master"));
+
+        return "/WEB-INF/view/admin/admin-feedback.jsp";
     }
 
     @Override

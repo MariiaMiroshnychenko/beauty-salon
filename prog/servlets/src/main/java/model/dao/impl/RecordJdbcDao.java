@@ -21,7 +21,7 @@ public class RecordJdbcDao implements RecordDao {
 
     @Override
     public void create(Record record) {
-        try (PreparedStatement statement = connection.prepareStatement("INSERT INTO record (master_id, procedure_id, record_date, `time`, client_id) VALUES (?, ?, ?, ?, ?)")) {
+        try (PreparedStatement statement = connection.prepareStatement("INSERT INTO record_table (master_id, procedure_id, record_date, `time`, client_id) VALUES (?, ?, ?, ?, ?)")) {
             statement.setInt(1, record.getMasterId());
             statement.setInt(2, record.getProcedureId());
             statement.setDate(3, Date.valueOf(record.getRecordDate()));
@@ -84,12 +84,12 @@ public class RecordJdbcDao implements RecordDao {
 
     @Override
     public List<Record> findRecordsByDateAndMasterId(String date, Integer masterId) {
-        return executeQuery("select * from record where record_date=? and master_id=?", date, masterId);
+        return executeQuery("select * from record_table where record_date=? and master_id=?", date, masterId);
     }
 
     @Override
     public List<Record> findRecordsByUserId(Integer userId, String userRole) {
-        String query = "select * from record where " + userRole + "_id=?";
+        String query = "select * from record_table where " + userRole + "_id=?";
         return executeQuery(query, userId);
     }
 
@@ -100,12 +100,12 @@ public class RecordJdbcDao implements RecordDao {
 
     @Override
     public List<Record> findRecordsByDate(String date) {
-        return executeQuery("select * from record where record_date=?", date);
+        return executeQuery("select * from record_table where record_date=?", date);
     }
 
     @Override
     public List<Record> findRecordsByDateAndTime(String date, LocalTime time) {
-        return executeQuery("select * from record where record_date=? and time=?", date, time);
+        return executeQuery("select * from record_table where record_date=? and time=?", date, time);
     }
 
     @Override
@@ -113,7 +113,7 @@ public class RecordJdbcDao implements RecordDao {
         Record record = null;
 
         try (PreparedStatement statement = connection.prepareStatement(
-                "SELECT * FROM record WHERE id=?")) {
+                "SELECT * FROM record_table WHERE id=?")) {
             statement.setInt(1, recordId);
             ResultSet resultSet = statement.executeQuery();
 

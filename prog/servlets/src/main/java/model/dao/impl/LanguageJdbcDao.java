@@ -52,7 +52,7 @@ public class LanguageJdbcDao implements LanguageDao {
     public Language findLanguageByLocale(String locale) {
         Language language = null;
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `language` where locale=?")) {
+        try (PreparedStatement statement = connection.prepareStatement("select * from `language_table` where locale=?")) {
             statement.setString(1, locale);
 
             ResultSet resultSet = statement.executeQuery();

@@ -19,7 +19,7 @@ public class FeedbackJdbcDao implements FeedbackDao {
     @Override
     public void create(Feedback feedback) {
         try (PreparedStatement statement = connection.prepareStatement(
-                "INSERT INTO feedback(client_id, master_id, record_id, text, date_time) " +
+                "INSERT INTO feedback_table(client_id, master_id, record_id, text, date_time) " +
                         "VALUES (?, ?, ?, ?, ?)")) {
             statement.setInt(1, feedback.getClientId());
             statement.setInt(2, feedback.getMasterId());
@@ -58,7 +58,7 @@ public class FeedbackJdbcDao implements FeedbackDao {
         Feedback feedback = null;
 
         try (PreparedStatement statement = connection.prepareStatement(
-                "SELECT * FROM feedback WHERE record_id=?")) {
+                "SELECT * FROM feedback_table WHERE record_id=?")) {
             statement.setInt(1, recordId);
             ResultSet resultSet = statement.executeQuery();
 
@@ -81,7 +81,7 @@ public class FeedbackJdbcDao implements FeedbackDao {
         List<Feedback> feedbacks = new ArrayList<>();
 
         try (PreparedStatement statement = connection.prepareStatement(
-                "SELECT * FROM feedback WHERE master_id=?")) {
+                "SELECT * FROM feedback_table WHERE master_id=?")) {
             statement.setInt(1, masterId);
             ResultSet resultSet = statement.executeQuery();
 

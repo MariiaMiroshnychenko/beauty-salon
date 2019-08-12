@@ -32,6 +32,7 @@
             <li class="nav-item">
                 <a class="nav-link" aria-disabled="true">${rc.getMessage("hi.user")}, ${admin.username}</a></li>
 
+
             <li class="nav-item">
                 <a class="nav-link">
                     <select id="locales" name="lang" style="font-size: 11pt">
@@ -43,7 +44,12 @@
             </li>
 
             <li class="nav-item active">
-                <a href="/logout" class="nav-link">${rc.getMessage("logout")}</a>
+                <a class="nav-link">
+                    <form method="post" action="/logout">
+                        <input type="hidden" name="_csrf" value="${_csrf.token}">
+                        <input type="submit" class="form-control" style="background: #292829" value="${rc.getMessage("logout")}">
+                    </form>
+                </a>
             </li>
         </ul>
     </div>
@@ -56,44 +62,11 @@
             <ul>
                 <li><a href="/admin/master-feedback"><span
                         class="fa fa-book"></span>${rc.getMessage("feedback")}</a></li>
-
                 <li>
-                    <a href=""><span
+                    <a href="/admin/salon-schedule"><span
                             class="fa fa-pencil"></span>${rc.getMessage("appointments")}</a></li>
 
             </ul>
-        </div>
-        <div class="column" style="padding: 30px">
-            <form method="get" action="/admin/master-feedback/master-submit">
-                <label for="master">${rc.getMessage("choose.master")}</label>
-                <select id="master" class="form-control" style="width: 250px" name="master">
-                    <#list masters as master>
-                        <option value="${master.id}">${master.name} ${master.surname}</option>
-                    </#list>
-                </select>
-                <input type="submit" style="width: 250px" class="form-control">
-            </form>
-            <#if reviewsForMaster>
-            <table class="table table-bordered" style="background-color: #eeeeee">
-                <thead>
-                <tr>
-                    <th align="center">${rc.getMessage("visit.date")}</th>
-                    <th align="center">${rc.getMessage("procedure")}</th>
-                    <th align="center" style="width: 300px">${rc.getMessage("feedback.text")}</th>
-                    <th align="center">${rc.getMessage("user.role.client")} ${rc.getMessage("username")}</th>
-                </tr>
-                </thead>
-                <tbody>
-                <#list reviewsForMaster as rev>
-                    <tr>
-                        <td>${rev.record.recordDate}</td>
-                        <td>${rev.record.procedure.name}</td>
-                        <td style="width: 300px">${rev.text}</td>
-                        <td>${rev.client.username}</td>
-                    </tr>
-                </#list>
-                </tbody>
-            </table></#if>
         </div>
     </div>
 </div>
@@ -103,8 +76,6 @@
             var selectedOption = $('#locales').val();
             if (selectedOption != ''){
                 window.location.replace('?lang=' + selectedOption);
-            } else {
-                selectedOption = 'en';
             }
         });
     });

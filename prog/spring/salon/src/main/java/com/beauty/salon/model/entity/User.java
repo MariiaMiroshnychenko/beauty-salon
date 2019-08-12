@@ -43,6 +43,9 @@ public class User implements UserDetails {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "clientId")
     private List<Record> clientRecords;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "clientId")
+    private List<Email> emails;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singletonList(this::getRole);

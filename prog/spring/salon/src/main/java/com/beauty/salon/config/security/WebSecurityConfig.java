@@ -29,7 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public AuthenticationSuccessHandler userAuthenticationSuccessHandler(){
+    public AuthenticationSuccessHandler userAuthenticationSuccessHandler() {
         return new UserAuthenticationSuccessHandler();
     }
 
@@ -42,7 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers( "/registration/**", "/login/**").permitAll()
+                .antMatchers("/registration/**", "/login/**").permitAll()
                 .antMatchers("/admin/**").hasAuthority("admin")
                 .antMatchers("/master/**").hasAuthority("master")
                 .antMatchers("/client/**").hasAuthority("client")

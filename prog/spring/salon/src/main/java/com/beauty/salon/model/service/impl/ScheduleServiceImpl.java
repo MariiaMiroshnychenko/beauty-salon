@@ -6,7 +6,10 @@ import com.beauty.salon.model.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ScheduleServiceImpl implements ScheduleService {
@@ -17,8 +20,31 @@ public class ScheduleServiceImpl implements ScheduleService {
         this.scheduleRepository = scheduleRepository;
     }
 
+    private Map<String, List<Schedule>> schedulesByDayOfWeek() {
+        Map<String, List<Schedule>> scheduleByDayOfWeekQuery = new HashMap<>();
+
+        scheduleByDayOfWeekQuery.put("monday", scheduleRepository.findSchedulesByMondayIsTrue());
+        scheduleByDayOfWeekQuery.put("tuesday", scheduleRepository.findSchedulesByTuesdayIsTrue());
+        scheduleByDayOfWeekQuery.put("wednesday", scheduleRepository.findSchedulesByWednesdayIsTrue());
+        scheduleByDayOfWeekQuery.put("thursday", scheduleRepository.findSchedulesByThursdayIsTrue());
+        scheduleByDayOfWeekQuery.put("friday", scheduleRepository.findSchedulesByFridayIsTrue());
+        scheduleByDayOfWeekQuery.put("saturday", scheduleRepository.findSchedulesBySaturdayIsTrue());
+        scheduleByDayOfWeekQuery.put("sunday", scheduleRepository.findSchedulesBySundayIsTrue());
+
+        return scheduleByDayOfWeekQuery;
+    }
+
+    private String getDayOfWeek(LocalDate date) {
+        return date.getDayOfWeek().toString().toLowerCase();
+    }
+
     @Override
-    public List<Schedule> findMastersByDay(String dayOfWeek) {
-        return scheduleRepository.findQueryByDayOfWeek(dayOfWeek);
+    public List<Schedule> findMastersByDay(LocalDate date) {
+        return schedulesByDayOfWeek().get(getDayOfWeek(date));
+    }
+
+    @Override
+    public List<Schedule> getScheduleByDateCheck(LocalDate date) {
+        return null;
     }
 }

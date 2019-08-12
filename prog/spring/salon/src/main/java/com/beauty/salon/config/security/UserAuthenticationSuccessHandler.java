@@ -33,14 +33,13 @@ public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHa
         Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
 
         for (GrantedAuthority grantedAuthority : authorities) {
-            System.out.println(grantedAuthority.getAuthority());
             switch (grantedAuthority.getAuthority()) {
                 case ("admin"):
                     return "/admin/menu";
                 case ("master"):
-                    return "/master/masterSchedule";
+                    return "/master/schedule";
                 case ("client"):
-                    return "/client/client-future-records";
+                    return "/client/notification";
             }
         }
 

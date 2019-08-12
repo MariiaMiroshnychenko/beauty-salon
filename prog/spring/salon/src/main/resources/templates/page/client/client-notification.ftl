@@ -6,14 +6,13 @@
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>${rc.getMessage("user.role.admin")}</title>
+    <title>${rc.getMessage("user.role.client")}</title>
     <style>
         body {
             background: url(http://localhost:8081/images/dc4c183f-da97-4c3b-910e-37bb8c38ae49.png) no-repeat center center fixed;
             background-size: cover;
         }
     </style>
-    <link rel="stylesheet" href="http://localhost:8081/css/admin_menu_style.css" media="screen" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
@@ -27,11 +26,18 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto"></ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="/client/make-appointment" class="nav-link">${rc.getMessage("appointments")}</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/client/notification" class="nav-link">${rc.getMessage("notifications")}(${notificationsAmount})</a>
+            </li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">
-                <a class="nav-link" aria-disabled="true">${rc.getMessage("hi.user")}, ${admin.username}</a></li>
-
+                <a class="nav-link" aria-disabled="true">${rc.getMessage("hi.user")}, ${client.username}</a></li>
 
             <li class="nav-item">
                 <a class="nav-link">
@@ -44,25 +50,53 @@
             </li>
 
             <li class="nav-item active">
-                <a href="/logout" class="nav-link">${rc.getMessage("logout")}</a>
+                <a class="nav-link">
+                    <form method="post" action="/logout">
+                        <input type="hidden" name="_csrf" value="${_csrf.token}">
+                        <input type="submit" class="form-control" style="background: #292829" value="${rc.getMessage("logout")}">
+                    </form>
+                </a>
             </li>
         </ul>
     </div>
 </nav>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="column"></div>
-        <div class="menu">
-            <ul>
-                <li><a href="/admin/master-feedback"><span
-                        class="fa fa-book"></span>${rc.getMessage("feedback")}</a></li>
-                <li>
-                    <a href=""><span
-                            class="fa fa-pencil"></span>${rc.getMessage("appointments")}</a></li>
-
-            </ul>
+<div class="row">
+    <div class="column">
+    <#if notifications?has_content>
+        <#list notifications as n>
+        <div class="row">
+            <div class="column">
+                <table>
+                    <tbody style="background-color: #f4d3ff">
+                    <tr>
+                        <td>${rc.getMessage("from")}:</td>
+                        <td><b>beauty_salon</b></td>
+                    </tr>
+                    <tr>
+                        <td>${rc.getMessage("to")}:</td>
+                        <td>${client.username}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            ${n.text}
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            ${rc.getMessage("to.leave.feedback")} <a href="">${rc.getMessage("this.link")}</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+        </#list>
+        <#else><label style="padding: 100px;">${rc.getMessage("no.notifications")}</label>
+    </#if>
+
     </div>
 </div>
 <script type="text/javascript">

@@ -54,7 +54,7 @@
 //            request.getSession().setAttribute("availableTimes", availableTimes);
 //            request.getSession().setAttribute("procedures", procedures);
 //        }
-//        return "/WEB-INF/view/client/make-appointment-confirm.jsp";
+//        return "/WEB-INF/view/client/make-appointment-confirm.ftl";
 //    }
 //
 //    @Override

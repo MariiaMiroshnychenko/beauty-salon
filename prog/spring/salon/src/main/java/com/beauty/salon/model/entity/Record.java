@@ -41,4 +41,7 @@ public class Record {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recordId")
     private List<Feedback> feedbacks;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recordId")
+    private List<Email> emails;
  }

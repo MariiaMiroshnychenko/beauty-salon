@@ -1,8 +1,9 @@
 package controller.filter;
 
-import controller.command.impl.master.MasterPage;
+import controller.command.Command;
 import controller.command.impl.admin.AdminMenu;
 import controller.command.impl.client.ClientFutureRecordPage;
+import controller.command.impl.master.MasterPage;
 import model.dao.UserDao;
 import model.entity.User;
 import org.mindrot.jbcrypt.BCrypt;
@@ -68,16 +69,18 @@ public class AuthenticationFilter implements Filter {
 
     private void redirectToAccount(final HttpServletRequest request, final HttpServletResponse response,
                                    final String role) throws ServletException, IOException {
+        Command menuPage;
+
         switch (role) {
             case ("admin"):
-                AdminMenu adminMenu = new AdminMenu();
-                request.getRequestDispatcher(adminMenu.execute(request)).forward(request, response);
+                menuPage = new AdminMenu();
+                request.getRequestDispatcher(menuPage.execute(request)).forward(request, response);
             case ("master"):
-                MasterPage masterPage = new MasterPage();
-                request.getRequestDispatcher(masterPage.execute(request)).forward(request, response);
+                menuPage = new MasterPage();
+                request.getRequestDispatcher(menuPage.execute(request)).forward(request, response);
             case ("client"):
-                ClientFutureRecordPage clientFutureRecordPage = new ClientFutureRecordPage();
-                request.getRequestDispatcher(clientFutureRecordPage.execute(request)).forward(request, response);
+                menuPage = new ClientFutureRecordPage();
+                request.getRequestDispatcher(menuPage.execute(request)).forward(request, response);
         }
     }
 

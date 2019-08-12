@@ -1,15 +1,19 @@
 package com.beauty.salon.controller.admin;
 
 import com.beauty.salon.model.entity.Feedback;
+import com.beauty.salon.model.entity.Record;
 import com.beauty.salon.model.entity.User;
 import com.beauty.salon.model.service.FeedbackService;
 import com.beauty.salon.model.service.ProcedureService;
+import com.beauty.salon.model.service.ScheduleService;
 import com.beauty.salon.model.service.UserService;
 import com.beauty.salon.model.service.admin.AdminService;
 import com.beauty.salon.model.service.admin.impl.AdminServiceImpl;
 import com.beauty.salon.model.service.impl.FeedbackServiceImpl;
 import com.beauty.salon.model.service.impl.ProcedureServiceImpl;
+import com.beauty.salon.model.service.impl.ScheduleServiceImpl;
 import com.beauty.salon.model.service.impl.UserServiceImpl;
+import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -18,22 +22,26 @@ import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
     private UserService userService;
-    private FeedbackService feedbackService;
     private AdminService adminService;
+    private ScheduleService scheduleService;
 
     @Autowired
     public AdminController(UserServiceImpl userServiceImpl,
-                           FeedbackServiceImpl feedbackServiceImpl,
-                           AdminServiceImpl adminServiceImpl) {
+                           AdminServiceImpl adminServiceImpl,
+                           ScheduleServiceImpl scheduleServiceImpl) {
         this.userService = userServiceImpl;
-        this.feedbackService = feedbackServiceImpl;
         this.adminService = adminServiceImpl;
+        this.scheduleService = scheduleServiceImpl;
     }
 
     @GetMapping("/menu")
@@ -42,33 +50,67 @@ public class AdminController {
         User user = (User) authentication.getPrincipal();
 
         model.addAttribute("admin", user);
-        return "/admin/admin-menu";
+        return "page/admin/admin-menu";
     }
 
     @GetMapping("/master-feedback")
-    public String getMastersFeedbackPage(
-            @RequestParam(name = "reviewsForMaster", required = false) List<Feedback> reviewsForMaster,
-                                         Model model) {
+    public String getMastersFeedbackPage(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = (User) authentication.getPrincipal();
 
+        model.addAttribute("reviewsForMasterNonNull", false);
         model.addAttribute("admin", user);
         model.addAttribute("masters", userService.findUsersByRole("master"));
-        model.addAttribute("reviewsForMaster", reviewsForMaster != null);
 
-        return "/admin/admin-feedback";
+        return "page/admin/admin-feedback";
     }
 
-    @GetMapping("/master-feedback/master-submit")
-    public String submitMasterForFeedbackPage(Integer master, String lang, Model model) {
-//        String lang
-//        System.out.println(master);
-//        System.out.println(lang);
-        return getMastersFeedbackPage(adminService.findFeedbacksByMasterId(master, lang), model);
-//        User user = userService.findUserById(master);
-//
-//        model.addAttribute("reviewsForMaster", feedbackService.findFeedbacksByMaster(user));
-//        return "/admin/admin-feedback";
-//        return getMastersFeedbackPage(model);
+    @GetMapping("/master-feedback/submit")
+    public String submitMasterForFeedbackPage(@RequestParam(name = "reviewsForMaster", required = false) List<Feedback> reviewsForMaster,
+                                              @RequestParam(name = "master") Integer master,
+                                              @RequestParam(name = "lang") String lang, Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = (User) authentication.getPrincipal();
+        List<Feedback> masterFeedback = adminService.findFeedbacksByMasterId(master, lang);
+
+        model.addAttribute("admin", user);
+        model.addAttribute("masters", userService.findUsersByRole("master"));
+        model.addAttribute("reviewsForMasterNonNull", masterFeedback != null);
+        model.addAttribute("reviewsForMaster", masterFeedback);
+
+        return "page/admin/admin-feedback";
+    }
+
+    @GetMapping("/salon-schedule")
+    public String getMastersRecords(Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = (User) authentication.getPrincipal();
+
+        model.addAttribute("selectedDate", LocalDate.now());
+        model.addAttribute("admin", user);
+        model.addAttribute("dateNonNull", false);
+
+        return "page/admin/adminPageSchedule";
+    }
+
+    @GetMapping("/salon-schedule/date-selected")
+    public String selectDateForSchedule(@RequestParam(name = "date", required = false) String date,
+                                        @RequestParam(name = "lang", required = false) String lang,
+                                        Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = (User) authentication.getPrincipal();
+
+        Map<LocalTime, List<Record>> masterRecordsMap = adminService.sortedRecordsByTime(date, lang);
+
+        masterRecordsMap.values().forEach(g -> g.forEach(h -> System.out.println(h.getProcedureId().getName())));
+
+        model.addAttribute("selectedDate", date);
+        model.addAttribute("admin", user);
+        model.addAttribute("dateNonNull", Objects.nonNull(masterRecordsMap));
+        model.addAttribute("times", masterRecordsMap.keySet());
+        model.addAttribute("records", masterRecordsMap.values());
+        model.addAttribute("masters", scheduleService.findMastersByDay(LocalDate.parse(date)));
+
+        return "page/admin/adminPageSchedule";
     }
 }

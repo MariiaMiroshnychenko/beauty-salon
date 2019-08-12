@@ -21,18 +21,4 @@ public interface ScheduleRepository extends JpaRepository<Schedule, User> {
     List<Schedule> findSchedulesByFridayIsTrue();
     List<Schedule> findSchedulesBySaturdayIsTrue();
     List<Schedule> findSchedulesBySundayIsTrue();
-
-    default List<Schedule> findQueryByDayOfWeek(String dayOfWeek) {
-        Map<String, List<Schedule>> scheduleByDayOfWeekQuery = new HashMap<>();
-        scheduleByDayOfWeekQuery.put("monday", findSchedulesByMondayIsTrue());
-        scheduleByDayOfWeekQuery.put("tuesday", findSchedulesByTuesdayIsTrue());
-        scheduleByDayOfWeekQuery.put("wednesday", findSchedulesByWednesdayIsTrue());
-        scheduleByDayOfWeekQuery.put("thursday", findSchedulesByThursdayIsTrue());
-        scheduleByDayOfWeekQuery.put("friday", findSchedulesByFridayIsTrue());
-        scheduleByDayOfWeekQuery.put("saturday", findSchedulesBySaturdayIsTrue());
-        scheduleByDayOfWeekQuery.put("sunday", findSchedulesBySundayIsTrue());
-
-        return scheduleByDayOfWeekQuery.get(dayOfWeek);
-    }
-
 }

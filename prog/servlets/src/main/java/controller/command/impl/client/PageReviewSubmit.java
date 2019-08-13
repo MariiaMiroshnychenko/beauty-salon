@@ -24,7 +24,7 @@ public class PageReviewSubmit implements Command{
                 request.getParameter("reviewText"),
                 LocalDateTime.now()));
 
-        return new PageReview().execute(request);
+        return new ClientPageFeedback().execute(request);
     }
 
     @Override

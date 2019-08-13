@@ -113,7 +113,6 @@
                 <select id="master" class="form-control" style="width: 250px" name="master">
                     <c:forEach var="master" items="${sessionScope.masters}">
                         <option value="${master.id}">
-                            <input type="hidden" name="masterNameSurname" value="${master.name} ${master.surname}"/>
                                 ${master.name} ${master.surname}
                         </option>
                     </c:forEach>
@@ -121,12 +120,12 @@
                 </select>
                 <input type="submit" style="width: 250px" class="form-control">
             </form>
-            Feedback for master <b><i>${param.masterNameSurname}</i></b>
             <table class="table table-bordered" style="background-color: #eeeeee">
                 <thead>
                 <tr>
                     <th align="center">Visit date</th>
                     <th align="center">Procedure</th>
+                    <th align="center">Master</th>
                     <th align="center" style="width: 300px">Review text</th>
                     <th align="center">Client username</th>
                 </tr>
@@ -136,6 +135,7 @@
                     <tr>
                         <td>${rev.record.recordDate}</td>
                         <td>${rev.record.procedure.name}</td>
+                        <td>${rev.master.name} ${rev.master.surname}</td>
                         <td style="width: 300px">${rev.text}</td>
                         <td>${rev.client.username}</td>
                     </tr>

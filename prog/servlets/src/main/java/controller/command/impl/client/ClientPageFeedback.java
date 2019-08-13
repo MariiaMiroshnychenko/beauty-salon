@@ -11,7 +11,7 @@ import model.service.user.impl.ClientServiceImpl;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
-public class PageReview implements Command {
+public class ClientPageFeedback implements Command {
     private String[] hasAuthority = {"client"};
 
     @Override
@@ -23,7 +23,7 @@ public class PageReview implements Command {
 
         request.setAttribute("recordsWithoutFeedback", clientService.uncheckedRecords(user, language));
 
-        return "/WEB-INF/view/client/review.jsp";
+        return "/WEB-INF/view/client/feedback.jsp";
     }
 
     @Override

@@ -1,9 +1,10 @@
 package model.service.user.impl;
 
-import model.dao.*;
 import model.entity.Record;
 import model.entity.Schedule;
 import model.entity.User;
+import model.service.*;
+import model.service.impl.*;
 import model.service.user.ClientService;
 
 import java.time.LocalDate;
@@ -28,10 +29,10 @@ public class ClientServiceImpl implements ClientService {
     }
 
     private List<LocalTime> unavailableTimeList(LocalDate date, String masterId) {
-        RecordDao recordDao = FactoryDao.getInstance().recordDao();
+        RecordService recordService = new RecordServiceImpl();
 
         List<LocalTime> unavailableTimes = new ArrayList<>();
-        List<Record> recordList = recordDao.findRecordsByDateAndMasterId(date, Integer.valueOf(masterId));
+        List<Record> recordList = recordService.findRecordsByDateAndMasterId(date, Integer.valueOf(masterId));
 
         recordList.forEach(record -> unavailableTimes.add(record.getTime()));
 
@@ -39,17 +40,17 @@ public class ClientServiceImpl implements ClientService {
     }
 
     private void setRecordsParameters(List<Record> records, String language) {
-        ProcedureDao procedureDao = FactoryDao.getInstance().procedureDao();
-        LanguageDao languageDao = FactoryDao.getInstance().languageDao();
-        UserDao userDao = FactoryDao.getInstance().userDao();
+        ProcedureService procedureService = new ProcedureServiceImpl();
+        LanguageService languageService = new LanguageServiceImpl();
+        UserService userService = new UserServiceImpl();
 
         records.forEach(record -> record.setProcedure(
-                procedureDao.findProcedureByCodeAndLanguageId(
-                        procedureDao.findProcedureById(record.getProcedureId()).getCode(),
-                        languageDao.findLanguageByLocale(language).getId())));
+                procedureService.findProcedureByCodeAndLanguageId(
+                        procedureService.findProcedureById(record.getProcedureId()).getCode(),
+                        languageService.findLanguageByLocale(language).getId())));
 
-        records.forEach(record -> record.setMaster(userDao.findUserById(record.getMasterId())));
-        records.forEach(record -> record.setClient(userDao.findUserById(record.getClientId())));
+        records.forEach(record -> record.setMaster(userService.findUserById(record.getMasterId())));
+        records.forEach(record -> record.setClient(userService.findUserById(record.getClientId())));
     }
 
     @Override
@@ -62,23 +63,23 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public List<User> masterList(LocalDate date) {
-        ScheduleDao scheduleDao = FactoryDao.getInstance().scheduleDao();
-        UserDao userDao = FactoryDao.getInstance().userDao();
+        ScheduleService scheduleService = new ScheduleServiceImpl();
+        UserService userService = new UserServiceImpl();
 
-        List<Schedule> schedules = scheduleDao.findMastersByDay(date);
+        List<Schedule> schedules = scheduleService.findMastersByDay(date);
         List<User> masters = new ArrayList<>();
 
-        schedules.forEach(schedule -> masters.add(userDao.findUserById(schedule.getMasterId())));
+        schedules.forEach(schedule -> masters.add(userService.findUserById(schedule.getMasterId())));
 
         return masters;
     }
 
     @Override
     public List<Record> futureOrPastRecords(User user, String language, String query) {
-        RecordDao recordDao = FactoryDao.getInstance().recordDao();
+        RecordService recordService = new RecordServiceImpl();
 
-        List<Record> futureRecords = recordDao.executeQuery(query,
-                user.getId(), LocalDate.now().toString(), LocalTime.now());
+        List<Record> futureRecords = recordService.executeQuery(query,
+                user.getId(), LocalDate.now(), LocalDate.now(), LocalTime.now());
 
         setRecordsParameters(futureRecords, language);
 
@@ -87,14 +88,14 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public List<Record> uncheckedRecords(User user, String language) {
-        RecordDao recordDao = FactoryDao.getInstance().recordDao();
-        FeedbackDao feedbackDao = FactoryDao.getInstance().reviewDao();
+        RecordService recordService = new RecordServiceImpl();
+        FeedbackService feedbackService = new FeedbackServiceImpl();
 
-        List<Record> records = recordDao.findRecordsByUserId(user.getId(), user.getRole());
+        List<Record> records = recordService.findRecordsByUserId(user.getId(), user.getRole());
 
         setRecordsParameters(records, language);
 
-        return records.stream().filter(record -> Objects.isNull(feedbackDao.findReviewByRecordId(record.getId())))
+        return records.stream().filter(record -> Objects.isNull(feedbackService.findReviewByRecordId(record.getId())))
                 .collect(Collectors.toList());
     }
 }

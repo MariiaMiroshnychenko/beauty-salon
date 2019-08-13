@@ -91,19 +91,14 @@
 </nav>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="column">
-            <h5 style="padding: 20px 375px">You have procedures without your feedback. Please, leave your
-                feedback for it!</h5>
-        </div>
-    </div>
+    <br/>
     <div class="row">
         <div class="column" style="width: 40%">
         </div>
         <div class="column" style="width: 55%">
             <c:forEach var="record" items="${requestScope.recordsWithoutFeedback}">
                 <div class="alert alert-warning alert-dismissable" style="background-color: #f4d3ff">
-                    <form method="post" action="${pageContext.request.contextPath}/salon/client/feedback-submit">
+                    <form method="post" action="${pageContext.request.contextPath}/salon/client/submit">
                         <a href="#" class="close" data-dismiss="alert" aria-label="Close">&times;</a>
                         <i>Visit date:</i> <strong>${record.recordDate}</strong>
                             <i>Procedure:</i> <strong>${record.procedure.name}</strong>

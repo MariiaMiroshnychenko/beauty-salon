@@ -1,9 +1,10 @@
 package model.service.user.impl;
 
 import container.ConstantWorkHour;
-import model.dao.*;
 import model.entity.Feedback;
 import model.entity.Record;
+import model.service.*;
+import model.service.impl.*;
 import model.service.user.AdminService;
 
 import java.time.LocalDate;
@@ -14,28 +15,29 @@ import java.util.TreeMap;
 
 public class AdminServiceImpl implements AdminService {
     private void setFeedbackParameters(List<Feedback> reviewsForMasterId, String language) {
-        RecordDao recordDao = FactoryDao.getInstance().recordDao();
-        LanguageDao languageDao = FactoryDao.getInstance().languageDao();
-        ProcedureDao procedureDao = FactoryDao.getInstance().procedureDao();
-        UserDao userDao = FactoryDao.getInstance().userDao();
+        RecordService recordService = new RecordServiceImpl();
+        LanguageService languageService = new LanguageServiceImpl();
+        ProcedureService procedureService = new ProcedureServiceImpl();
+        UserService userService = new UserServiceImpl();
 
         reviewsForMasterId.forEach(review -> {
-            review.setClient(userDao.findUserById(review.getClientId()));
-            review.setMaster(userDao.findUserById(review.getMasterId()));
-            review.setRecord(recordDao.findRecordById(review.getRecordId()));
+            review.setClient(userService.findUserById(review.getClientId()));
+            review.setMaster(userService.findUserById(review.getMasterId()));
+            review.setRecord(recordService.findRecordById(review.getRecordId()));
         });
 
         reviewsForMasterId.forEach(review ->
-                review.getRecord().setProcedure(procedureDao.findProcedureByCodeAndLanguageId(
-                        procedureDao.findProcedureById(review.getRecord().getProcedureId()).getCode(),
-                        languageDao.findLanguageByLocale(language).getId())
+                review.getRecord().setProcedure(procedureService.findProcedureByCodeAndLanguageId(
+                        procedureService.findProcedureById(review.getRecord().getProcedureId()).getCode(),
+                        languageService.findLanguageByLocale(language).getId())
                 ));
     }
 
     @Override
     public List<Feedback> feedbackForMaster(Integer masterId, String language) {
-        FeedbackDao feedbackDao = FactoryDao.getInstance().reviewDao();
-        List<Feedback> reviewsForMasterId = feedbackDao.findReviewsByMasterId(masterId);
+        FeedbackService feedbackService = new FeedbackServiceImpl();
+
+        List<Feedback> reviewsForMasterId = feedbackService.findReviewByMasterId(masterId);
 
         setFeedbackParameters(reviewsForMasterId, language);
 
@@ -48,7 +50,7 @@ public class AdminServiceImpl implements AdminService {
         int endHour = ConstantWorkHour.END_HOUR;
         int minute = ConstantWorkHour.MINUTE;
 
-        RecordDao recordDao = FactoryDao.getInstance().recordDao();
+        RecordService recordService = new RecordServiceImpl();
 
         LocalTime time;
         List<Record> recordsByDateAndTime;
@@ -56,7 +58,7 @@ public class AdminServiceImpl implements AdminService {
 
         while (beginHour <= endHour) {
             time = LocalTime.of(beginHour, minute);
-            recordsByDateAndTime = recordDao.findRecordsByDateAndTime(date, time);
+            recordsByDateAndTime = recordService.findRecordsByDateAndTime(date, time);
 
             setRecordsParameters(recordsByDateAndTime, locale);
 
@@ -68,16 +70,16 @@ public class AdminServiceImpl implements AdminService {
     }
 
     public void setRecordsParameters(List<Record> recordsForDay, String language) {
-        UserDao userDao = FactoryDao.getInstance().userDao();
-        ProcedureDao procedureDao = FactoryDao.getInstance().procedureDao();
-        LanguageDao languageDao = FactoryDao.getInstance().languageDao();
+        UserService userService = new UserServiceImpl();
+        ProcedureService procedureService = new ProcedureServiceImpl();
+        LanguageService languageService = new LanguageServiceImpl();
 
-        recordsForDay.forEach(record -> record.setMaster(userDao.findUserById(record.getMasterId())));
+        recordsForDay.forEach(record -> record.setMaster(userService.findUserById(record.getMasterId())));
 
         recordsForDay.forEach(record ->
-                record.setProcedure(procedureDao.findProcedureByCodeAndLanguageId(
-                        procedureDao.findProcedureById(record.getProcedureId()).getCode(),
-                        languageDao.findLanguageByLocale(language).getId())));
+                record.setProcedure(procedureService.findProcedureByCodeAndLanguageId(
+                        procedureService.findProcedureById(record.getProcedureId()).getCode(),
+                        languageService.findLanguageByLocale(language).getId())));
     }
 }
 

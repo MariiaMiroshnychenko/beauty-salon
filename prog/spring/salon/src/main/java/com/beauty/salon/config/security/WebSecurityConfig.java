@@ -1,6 +1,6 @@
 package com.beauty.salon.config.security;
 
-import com.beauty.salon.model.service.UserService;
+import com.beauty.salon.model.service.general.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

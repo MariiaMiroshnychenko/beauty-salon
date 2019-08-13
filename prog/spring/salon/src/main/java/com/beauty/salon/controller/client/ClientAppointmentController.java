@@ -1,10 +1,10 @@
 package com.beauty.salon.controller.client;
 
 import com.beauty.salon.controller.MainController;
-import com.beauty.salon.model.service.EmailService;
-import com.beauty.salon.model.service.ScheduleService;
-import com.beauty.salon.model.service.impl.EmailServiceImpl;
-import com.beauty.salon.model.service.impl.ScheduleServiceImpl;
+import com.beauty.salon.model.service.general.EmailService;
+import com.beauty.salon.model.service.general.ScheduleService;
+import com.beauty.salon.model.service.general.impl.EmailServiceImpl;
+import com.beauty.salon.model.service.general.impl.ScheduleServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

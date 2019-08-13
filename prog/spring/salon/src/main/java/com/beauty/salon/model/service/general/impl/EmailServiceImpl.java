@@ -1,11 +1,11 @@
-package com.beauty.salon.model.service.impl;
+package com.beauty.salon.model.service.general.impl;
 
 import com.beauty.salon.model.entity.Email;
 import com.beauty.salon.model.entity.Record;
 import com.beauty.salon.model.entity.User;
 import com.beauty.salon.model.repository.EmailRepository;
 import com.beauty.salon.model.repository.ProcedureRepository;
-import com.beauty.salon.model.service.EmailService;
+import com.beauty.salon.model.service.general.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

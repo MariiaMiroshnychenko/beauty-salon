@@ -1,4 +1,4 @@
-package com.beauty.salon.model.service;
+package com.beauty.salon.model.service.general;
 
 import com.beauty.salon.model.entity.Email;
 import com.beauty.salon.model.entity.Record;

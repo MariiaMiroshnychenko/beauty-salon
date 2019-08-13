@@ -1,8 +1,8 @@
-package com.beauty.salon.model.service.impl;
+package com.beauty.salon.model.service.general.impl;
 
 import com.beauty.salon.model.entity.Procedure;
 import com.beauty.salon.model.repository.ProcedureRepository;
-import com.beauty.salon.model.service.ProcedureService;
+import com.beauty.salon.model.service.general.ProcedureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,10 +25,5 @@ public class ProcedureServiceImpl implements ProcedureService {
     @Override
     public List<Procedure> findProceduresByLocale(String locale) {
         return procedureRepository.findProceduresByLanguageId_Locale(locale);
-    }
-
-    @Override
-    public Procedure findProcedureByCodeAndLocale(Integer procedureCode, String locale) {
-        return procedureRepository.findProcedureByCodeAndLanguageId_Locale(procedureCode, locale);
     }
 }

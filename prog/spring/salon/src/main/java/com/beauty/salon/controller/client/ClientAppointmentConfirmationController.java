@@ -2,10 +2,13 @@ package com.beauty.salon.controller.client;
 
 import com.beauty.salon.controller.MainController;
 import com.beauty.salon.model.entity.Record;
-import com.beauty.salon.model.service.*;
 import com.beauty.salon.model.service.client.ClientService;
 import com.beauty.salon.model.service.client.impl.ClientServiceImpl;
-import com.beauty.salon.model.service.impl.*;
+import com.beauty.salon.model.service.general.EmailService;
+import com.beauty.salon.model.service.general.ProcedureService;
+import com.beauty.salon.model.service.general.RecordService;
+import com.beauty.salon.model.service.general.UserService;
+import com.beauty.salon.model.service.general.impl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

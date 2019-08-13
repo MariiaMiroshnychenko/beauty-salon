@@ -3,25 +3,19 @@ package com.beauty.salon.controller.client;
 import com.beauty.salon.controller.MainController;
 import com.beauty.salon.model.entity.Email;
 import com.beauty.salon.model.entity.Feedback;
-import com.beauty.salon.model.entity.Record;
-import com.beauty.salon.model.entity.User;
-import com.beauty.salon.model.service.*;
-import com.beauty.salon.model.service.client.ClientService;
-import com.beauty.salon.model.service.client.impl.ClientServiceImpl;
-import com.beauty.salon.model.service.impl.*;
+import com.beauty.salon.model.service.general.EmailService;
+import com.beauty.salon.model.service.general.FeedbackService;
+import com.beauty.salon.model.service.general.RecordService;
+import com.beauty.salon.model.service.general.UserService;
+import com.beauty.salon.model.service.general.impl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.List;
 
 @Controller
 @RequestMapping("/client")

@@ -1,4 +1,4 @@
-package com.beauty.salon.model.service;
+package com.beauty.salon.model.service.general;
 
 import com.beauty.salon.model.entity.Schedule;
 
@@ -7,5 +7,4 @@ import java.util.List;
 
 public interface ScheduleService {
     List<Schedule> findMastersByDay(LocalDate date);
-    List<Schedule> getScheduleByDateCheck(LocalDate date);
 }

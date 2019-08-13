@@ -1,7 +1,7 @@
 package com.beauty.salon.controller;
 
 import com.beauty.salon.model.entity.User;
-import com.beauty.salon.model.service.impl.UserServiceImpl;
+import com.beauty.salon.model.service.general.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;

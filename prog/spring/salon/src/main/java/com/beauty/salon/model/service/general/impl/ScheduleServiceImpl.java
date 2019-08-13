@@ -1,8 +1,8 @@
-package com.beauty.salon.model.service.impl;
+package com.beauty.salon.model.service.general.impl;
 
 import com.beauty.salon.model.entity.Schedule;
 import com.beauty.salon.model.repository.ScheduleRepository;
-import com.beauty.salon.model.service.ScheduleService;
+import com.beauty.salon.model.service.general.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,10 +41,5 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public List<Schedule> findMastersByDay(LocalDate date) {
         return schedulesByDayOfWeek().get(getDayOfWeek(date));
-    }
-
-    @Override
-    public List<Schedule> getScheduleByDateCheck(LocalDate date) {
-        return null;
     }
 }

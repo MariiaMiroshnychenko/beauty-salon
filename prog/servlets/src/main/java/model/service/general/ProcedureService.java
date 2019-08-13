@@ -1,10 +1,11 @@
-package model.service;
+package model.service.general;
 
 import model.entity.Procedure;
 
 import java.util.List;
 
-public interface ProcedureService {
+public interface
+ProcedureService {
     Procedure findProcedureById(Integer id);
     List<Procedure> findProceduresByLanguageId(Integer languageId);
     Procedure findProcedureByCodeAndLanguageId(Integer procedureCode, Integer languageId);

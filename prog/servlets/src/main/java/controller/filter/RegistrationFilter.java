@@ -1,10 +1,10 @@
 package controller.filter;
 
-import controller.command.impl.Registration;
 import controller.command.impl.Authorization;
+import controller.command.impl.Registration;
 import model.entity.User;
-import model.service.UserService;
-import model.service.impl.UserServiceImpl;
+import model.service.general.UserService;
+import model.service.general.impl.UserServiceImpl;
 import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.*;

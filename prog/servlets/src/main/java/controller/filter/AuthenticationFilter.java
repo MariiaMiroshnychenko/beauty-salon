@@ -1,5 +1,6 @@
 package controller.filter;
 
+import container.ConstantWorkHour;
 import controller.command.Command;
 import controller.command.impl.admin.AdminMenu;
 import controller.command.impl.client.ClientFutureRecordPage;
@@ -52,10 +53,8 @@ public class AuthenticationFilter implements Filter {
                 request.getSession().setAttribute("user", user);
                 request.getSession().setAttribute("role", user.getRole());
 
-                int lastVisitHour = 18;
-                int minute = 0;
                 LocalDate availableDate = LocalTime.now()
-                        .compareTo(LocalTime.of(lastVisitHour, minute)) >= 0 ? LocalDate.now().plusDays(1) : LocalDate.now();
+                        .compareTo(LocalTime.of(ConstantWorkHour.END_HOUR, ConstantWorkHour.MINUTE)) >= 0 ? LocalDate.now().plusDays(1) : LocalDate.now();
                 request.getSession().setAttribute("availableDate", availableDate);
 
                 redirectToAccount(request, response, user.getRole());

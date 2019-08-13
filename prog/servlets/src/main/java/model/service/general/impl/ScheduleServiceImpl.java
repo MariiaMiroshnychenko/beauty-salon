@@ -1,9 +1,9 @@
-package model.service.impl;
+package model.service.general.impl;
 
 import model.dao.FactoryDao;
 import model.dao.ScheduleDao;
 import model.entity.Schedule;
-import model.service.ScheduleService;
+import model.service.general.ScheduleService;
 
 import java.time.LocalDate;
 import java.util.List;

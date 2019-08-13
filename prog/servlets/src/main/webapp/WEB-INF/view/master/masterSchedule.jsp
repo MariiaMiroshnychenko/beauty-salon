@@ -23,7 +23,7 @@
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Master</title>
+    <title><fmt:message key="user.role.master"/></title>
     <style>
         body {
             background: url(http://localhost:8080/images/dc4c183f-da97-4c3b-910e-37bb8c38ae49.jpg) no-repeat center center fixed;
@@ -48,7 +48,7 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item"><a class="nav-link" aria-disabled="true"> Hi, ${sessionScope.user.username}</a></li>
+            <li class="nav-item"><a class="nav-link" aria-disabled="true"> <fmt:message key="hi.user"/>, ${sessionScope.user.username}</a></li>
 
             <li class="nav-item active">
                 <a class="nav-link">
@@ -67,7 +67,7 @@
                 </a>
             </li>
             <li class="nav-item active">
-                <a href="${pageContext.request.contextPath}/logout" class="nav-link">Logout</a>
+                <a href="${pageContext.request.contextPath}/logout" class="nav-link"><fmt:message key="logout"/></a>
             </li>
         </ul>
     </div>
@@ -87,8 +87,8 @@
         <table class="table table-bordered" style="background-color: #f4d3ff">
             <thead>
             <tr>
-                <th align="center"><b><i>Time</i></b></th>
-                <th align="center"><b>Procedure</b> / <i>Client</i></th>
+                <th align="center"><b><i><fmt:message key="time"/></i></b></th>
+                <th align="center"><b><fmt:message key="procedure"/></b> / <i><fmt:message key="user.role.client"/></i></th>
             </tr>
             </thead>
             <tbody>

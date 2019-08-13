@@ -1,15 +1,12 @@
 package controller.command.impl.client;
 
 import controller.command.Command;
-import model.entity.Record;
 import model.entity.User;
-import model.service.*;
-import model.service.impl.*;
 import model.service.user.ClientService;
 import model.service.user.impl.ClientServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.*;
+import java.util.Arrays;
 
 public class ClientPageFeedback implements Command {
     private String[] hasAuthority = {"client"};

@@ -1,7 +1,7 @@
 package service;
 
-import model.service.FeedbackService;
-import model.service.impl.FeedbackServiceImpl;
+import model.service.general.FeedbackService;
+import model.service.general.impl.FeedbackServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Spy;

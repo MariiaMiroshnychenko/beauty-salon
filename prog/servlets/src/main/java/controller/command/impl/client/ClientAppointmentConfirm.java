@@ -2,16 +2,20 @@ package controller.command.impl.client;
 
 import container.ConstantWorkHour;
 import controller.command.Command;
-import model.entity.*;
-import model.service.*;
-import model.service.impl.*;
+import model.entity.Language;
+import model.entity.Procedure;
+import model.service.general.LanguageService;
+import model.service.general.ProcedureService;
+import model.service.general.impl.LanguageServiceImpl;
+import model.service.general.impl.ProcedureServiceImpl;
 import model.service.user.ClientService;
 import model.service.user.impl.ClientServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 
 public class ClientAppointmentConfirm implements Command {
     private String[] hasAuthority = {"client"};

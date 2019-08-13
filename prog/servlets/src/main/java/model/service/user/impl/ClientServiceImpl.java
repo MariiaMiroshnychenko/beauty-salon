@@ -3,8 +3,8 @@ package model.service.user.impl;
 import model.entity.Record;
 import model.entity.Schedule;
 import model.entity.User;
-import model.service.*;
-import model.service.impl.*;
+import model.service.general.*;
+import model.service.general.impl.*;
 import model.service.user.ClientService;
 
 import java.time.LocalDate;

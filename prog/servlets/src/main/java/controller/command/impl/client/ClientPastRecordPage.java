@@ -2,18 +2,12 @@ package controller.command.impl.client;
 
 import container.Query;
 import controller.command.Command;
-import model.entity.Record;
 import model.entity.User;
-import model.service.*;
-import model.service.impl.*;
 import model.service.user.ClientService;
 import model.service.user.impl.ClientServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.Arrays;
-import java.util.List;
 
 public class ClientPastRecordPage implements Command {
     private String[] hasAuthority = {"client"};

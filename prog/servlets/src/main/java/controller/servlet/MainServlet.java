@@ -1,20 +1,13 @@
 package controller.servlet;
 
 import controller.command.Command;
-import controller.command.impl.client.ClientAppointmentConfirm;
-import controller.command.impl.Logout;
-import controller.command.impl.client.ClientPageFeedback;
-import controller.command.impl.Registration;
 import controller.command.impl.Authorization;
-import controller.command.impl.admin.AdminPageRecord;
+import controller.command.impl.Logout;
+import controller.command.impl.Registration;
 import controller.command.impl.admin.AdminPageFeedback;
 import controller.command.impl.admin.AdminPageMasterSelection;
-import controller.command.impl.client.ClientAppointment;
-import controller.command.impl.client.ClientFutureRecordPage;
-import controller.command.impl.client.ClientPastRecordPage;
-import controller.command.impl.client.ClientAppointmentSubmit;
-import controller.command.impl.client.PageReviewSubmit;
-import controller.command.impl.client.ClientAppointmentDate;
+import controller.command.impl.admin.AdminPageRecord;
+import controller.command.impl.client.*;
 import controller.command.impl.master.MasterPageSchedule;
 
 import javax.servlet.ServletException;

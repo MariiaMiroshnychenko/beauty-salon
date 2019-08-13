@@ -1,4 +1,4 @@
-package model.service;
+package model.service.general;
 
 import model.entity.User;
 

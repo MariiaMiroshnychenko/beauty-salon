@@ -9,9 +9,6 @@ public class Logout implements Command {
     private String[] hasAuthority = {"admin", "client", "master"};
     @Override
     public String execute(HttpServletRequest request) {
-        request.getSession().removeAttribute("user");
-        request.getSession().removeAttribute("role");
-
         return "/WEB-INF/view/authorization.jsp";
     }
 

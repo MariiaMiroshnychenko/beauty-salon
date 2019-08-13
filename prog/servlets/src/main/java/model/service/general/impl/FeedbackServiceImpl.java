@@ -1,9 +1,9 @@
-package model.service.impl;
+package model.service.general.impl;
 
 import model.dao.FactoryDao;
 import model.dao.FeedbackDao;
 import model.entity.Feedback;
-import model.service.FeedbackService;
+import model.service.general.FeedbackService;
 
 import java.util.List;
 

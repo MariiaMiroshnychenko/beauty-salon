@@ -1,8 +1,8 @@
 package controller.command.impl.admin;
 
 import controller.command.Command;
-import model.service.UserService;
-import model.service.impl.UserServiceImpl;
+import model.service.general.UserService;
+import model.service.general.impl.UserServiceImpl;
 import model.service.user.AdminService;
 import model.service.user.impl.AdminServiceImpl;
 

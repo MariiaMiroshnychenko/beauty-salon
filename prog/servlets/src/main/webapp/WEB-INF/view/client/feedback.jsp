@@ -23,7 +23,7 @@
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Client</title>
+    <title><fmt:message key="user.role.client"/></title>
     <style>
         body {
             background: url(http://localhost:8080/images/kisspng-ballet-dancer-drawing-painting-5c0d8256b97290.1365284715443892067596.png) no-repeat center center fixed;
@@ -46,25 +46,25 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    My records
+                    <fmt:message key="appointments"/>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/client-past-records?language=${sessionScope.language}">Past records</a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/client-past-records?language=${sessionScope.language}"><fmt:message key="past.appointments"/></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/client-future-records?language=${sessionScope.language}">Future records</a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/client-future-records?language=${sessionScope.language}"><fmt:message key="future.appointments"/></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/make-appointment">To make appointment </a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/make-appointment"><fmt:message key="sign.up.appointment"/></a>
                 </div>
             </li>
 
             <li class="nav-item active">
-                <a href="${pageContext.request.contextPath}/salon/client/feedback?language=${sessionScope.language}" class="nav-link">To write feedback</a>
+                <a href="${pageContext.request.contextPath}/salon/client/feedback?language=${sessionScope.language}" class="nav-link"><fmt:message key="to.leave.feedback"/></a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
             <li class="nav-item ">
-                <a class="nav-link">Hi, ${sessionScope.user.username}</a></li>
+                <a class="nav-link"><fmt:message key="hi.user"/>, ${sessionScope.user.username}</a></li>
 
             <li class="nav-item">
                 <a class="nav-link">
@@ -84,7 +84,7 @@
             </li>
 
             <li class="nav-item active">
-                <a href="${pageContext.request.contextPath}/logout" class="nav-link">Logout</a>
+                <a href="${pageContext.request.contextPath}/logout" class="nav-link"><fmt:message key="logout"/></a>
             </li>
         </ul>
     </div>
@@ -100,13 +100,13 @@
                 <div class="alert alert-warning alert-dismissable" style="background-color: #f4d3ff">
                     <form method="post" action="${pageContext.request.contextPath}/salon/client/submit">
                         <a href="#" class="close" data-dismiss="alert" aria-label="Close">&times;</a>
-                        <i>Visit date:</i> <strong>${record.recordDate}</strong>
-                            <i>Procedure:</i> <strong>${record.procedure.name}</strong>
-                            <i>Master:</i> <strong>${record.master.name} ${record.master.surname}</strong><br/>
+                        <i><fmt:message key="visit.date"/>:</i> <strong>${record.recordDate}</strong>
+                            <i><fmt:message key="procedure"/>:</i> <strong>${record.procedure.name}</strong>
+                            <i><fmt:message key="user.role.master"/>:</i> <strong>${record.master.name} ${record.master.surname}</strong><br/>
                         <input type="hidden" name="recordId" value="${record.id}">
                         <input type="hidden" name="masterId" value="${record.master.id}">
                         <input type="hidden" name="language" value="${sessionScope.language}">
-                        Input your feedback:
+                        <fmt:message key="feedback.text"/>:
                         <textarea id="reviewText" name="reviewText" class="form-control"></textarea>
                         <input type="submit" value="Submit" class="form-control button" style="width: 100px">
                     </form>

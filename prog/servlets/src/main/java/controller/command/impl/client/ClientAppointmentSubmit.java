@@ -3,8 +3,8 @@ package controller.command.impl.client;
 import controller.command.Command;
 import model.entity.Record;
 import model.entity.User;
-import model.service.RecordService;
-import model.service.impl.RecordServiceImpl;
+import model.service.general.RecordService;
+import model.service.general.impl.RecordServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;

@@ -1,9 +1,9 @@
-package model.service.impl;
+package model.service.general.impl;
 
 import model.dao.FactoryDao;
 import model.dao.ProcedureDao;
 import model.entity.Procedure;
-import model.service.ProcedureService;
+import model.service.general.ProcedureService;
 
 import java.util.List;
 

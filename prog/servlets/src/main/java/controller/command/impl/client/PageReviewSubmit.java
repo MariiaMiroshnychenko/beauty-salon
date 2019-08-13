@@ -3,8 +3,8 @@ package controller.command.impl.client;
 import controller.command.Command;
 import model.entity.Feedback;
 import model.entity.User;
-import model.service.FeedbackService;
-import model.service.impl.FeedbackServiceImpl;
+import model.service.general.FeedbackService;
+import model.service.general.impl.FeedbackServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;

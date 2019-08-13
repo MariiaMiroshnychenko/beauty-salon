@@ -1,9 +1,9 @@
-package model.service.impl;
+package model.service.general.impl;
 
 import model.dao.FactoryDao;
 import model.dao.LanguageDao;
 import model.entity.Language;
-import model.service.LanguageService;
+import model.service.general.LanguageService;
 
 public class LanguageServiceImpl implements LanguageService {
     @Override

@@ -23,7 +23,7 @@
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Admin</title>
+    <title><fmt:message key="user.role.admin"/></title>
     <style>
         body {
             background: url(http://localhost:8080/images/dc4c183f-da97-4c3b-910e-37bb8c38ae49.png) no-repeat center center fixed;
@@ -47,7 +47,7 @@
         <ul class="navbar-nav mr-auto"></ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">
-                <a class="nav-link" aria-disabled="true">Hi, ${sessionScope.user.username}</a></li>
+                <a class="nav-link" aria-disabled="true"><fmt:message key="hi.user"/>, ${sessionScope.user.username}</a></li>
 
             <li class="nav-item">
                 <a class="nav-link">
@@ -68,7 +68,7 @@
             </li>
 
             <li class="nav-item active">
-                <a href="${pageContext.request.contextPath}/logout" class="nav-link">Logout</a>
+                <a href="${pageContext.request.contextPath}/logout" class="nav-link"><fmt:message key="logout"/></a>
             </li>
         </ul>
     </div>
@@ -78,18 +78,18 @@
         <div class="menu">
             <ul>
                 <li><a href="${pageContext.request.contextPath}/salon/admin/master-feedback"><span
-                        class="fa fa-book"></span>Reviews</a>
+                        class="fa fa-book"></span><fmt:message key="feedback"/></a>
                 </li>
                 <li>
                     <a href="${pageContext.request.contextPath}/salon/admin/master-records?date=${sessionScope.availableDate}"><span
-                            class="fa fa-pencil"></span>Appointments</a></li>
+                            class="fa fa-pencil"></span><fmt:message key="appointments"/></a></li>
             </ul>
         </div>
     </div>
     <div class="column"  style="padding: 20px">
         <form method="get"
               action="${pageContext.request.contextPath}/salon/admin/master-records">
-            <label>Choose date:</label>
+            <label><fmt:message key="choose.date"/>:</label>
             <input type="hidden" name="language" value="${sessionScope.language}"/>
             <input type="date" class="form-control" id="date" name="date"
                    onchange="submit()" value="${param.date}" style="width: 230px">
@@ -108,8 +108,8 @@
             <tr>
                 <td>
                     <c:forEach var="value" items="${requestScope.masters}">
-                        <b>Master</b><br/>
-                        <i>procedure</i><br/>
+                        <b><fmt:message key="user.role.master"/></b><br/>
+                        <i><fmt:message key="procedure"/></i><br/>
                         <hr/>
                     </c:forEach></td>
                 <c:forEach var="record" items="${requestScope.records}">

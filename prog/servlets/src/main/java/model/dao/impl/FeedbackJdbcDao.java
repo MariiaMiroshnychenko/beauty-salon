@@ -35,16 +35,6 @@ public class FeedbackJdbcDao implements FeedbackDao {
     }
 
     @Override
-    public void update(Feedback feedback) {
-
-    }
-
-    @Override
-    public void delete() {
-
-    }
-
-    @Override
     public void close() {
         try {
             connection.close();

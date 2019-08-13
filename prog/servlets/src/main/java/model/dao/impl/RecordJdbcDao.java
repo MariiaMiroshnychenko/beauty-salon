@@ -36,16 +36,6 @@ public class RecordJdbcDao implements RecordDao {
     }
 
     @Override
-    public void update(Record record) {
-
-    }
-
-    @Override
-    public void delete() {
-
-    }
-
-    @Override
     public void close() {
         try {
             connection.close();
@@ -83,7 +73,7 @@ public class RecordJdbcDao implements RecordDao {
     }
 
     @Override
-    public List<Record> findRecordsByDateAndMasterId(String date, Integer masterId) {
+    public List<Record> findRecordsByDateAndMasterId(LocalDate date, Integer masterId) {
         return executeQuery("select * from record_table where record_date=? and master_id=?", date, masterId);
     }
 
@@ -94,17 +84,17 @@ public class RecordJdbcDao implements RecordDao {
     }
 
     @Override
-    public List<Record> findRecordsByDateAndTimeWithCondition(String date, LocalTime time, String query) {
+    public List<Record> findRecordsByDateAndTimeWithCondition(LocalDate date, LocalTime time, String query) {
         return executeQuery(query, date, date, time);
     }
 
     @Override
-    public List<Record> findRecordsByDate(String date) {
+    public List<Record> findRecordsByDate(LocalDate date) {
         return executeQuery("select * from record_table where record_date=?", date);
     }
 
     @Override
-    public List<Record> findRecordsByDateAndTime(String date, LocalTime time) {
+    public List<Record> findRecordsByDateAndTime(LocalDate date, LocalTime time) {
         return executeQuery("select * from record_table where record_date=? and time=?", date, time);
     }
 

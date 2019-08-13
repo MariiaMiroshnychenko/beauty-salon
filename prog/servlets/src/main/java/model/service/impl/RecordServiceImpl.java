@@ -5,6 +5,7 @@ import model.dao.RecordDao;
 import model.entity.Record;
 import model.service.RecordService;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public List<Record> findRecordsByDateAndMasterId(String date, Integer masterId) {
+    public List<Record> findRecordsByDateAndMasterId(LocalDate date, Integer masterId) {
         RecordDao recordDao = FactoryDao.getInstance().recordDao();
         List<Record> records = recordDao.findRecordsByDateAndMasterId(date, masterId);
 
@@ -36,7 +37,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public List<Record> findRecordsByDateAndTimeWithCondition(String date, LocalTime time, String query) {
+    public List<Record> findRecordsByDateAndTimeWithCondition(LocalDate date, LocalTime time, String query) {
         RecordDao recordDao = FactoryDao.getInstance().recordDao();
         List<Record> records = recordDao.findRecordsByDateAndTimeWithCondition(date, time, query);
 
@@ -45,7 +46,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public List<Record> findRecordsByDate(String date) {
+    public List<Record> findRecordsByDate(LocalDate date) {
         RecordDao recordDao = FactoryDao.getInstance().recordDao();
         List<Record> records = recordDao.findRecordsByDate(date);
 
@@ -54,7 +55,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public List<Record> findRecordsByDateAndTime(String date, LocalTime time) {
+    public List<Record> findRecordsByDateAndTime(LocalDate date, LocalTime time) {
         RecordDao recordDao = FactoryDao.getInstance().recordDao();
         List<Record> records = recordDao.findRecordsByDateAndTime(date, time);
 

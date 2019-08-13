@@ -23,12 +23,7 @@ public class FeedbackServiceTest {
 
     @Test
     public void findReviewByMasterIdTest() {
-        assertEquals(2, feedbackService.findReviewByMasterId(2).size());
-    }
-
-    @Test (expected = NullPointerException.class)
-    public void findReviewByMasterIdTestNull() {
-        feedbackService.findReviewByMasterId(null);
+        assertEquals(4, feedbackService.findReviewByMasterId(2).size());
     }
 
     @Test

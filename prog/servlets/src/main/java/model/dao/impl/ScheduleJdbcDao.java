@@ -31,16 +31,6 @@ public class ScheduleJdbcDao implements ScheduleDao {
     }
 
     @Override
-    public void update(Schedule schedule) {
-
-    }
-
-    @Override
-    public void delete() {
-
-    }
-
-    @Override
     public void close() {
         try {
             connection.close();
@@ -50,10 +40,10 @@ public class ScheduleJdbcDao implements ScheduleDao {
     }
 
     @Override
-    public List<Schedule> findMastersByDay(String date) {
+    public List<Schedule> findMastersByDay(LocalDate date) {
         List<Schedule> schedules = new ArrayList<>();
 
-        String dayOfWeek = LocalDate.parse(date).getDayOfWeek().toString().toLowerCase();
+        String dayOfWeek = date.getDayOfWeek().toString().toLowerCase();
 
         try (PreparedStatement statement = connection.prepareStatement("select * from `schedule_table` where " + dayOfWeek + " = true")) {
             ResultSet resultSet = statement.executeQuery();

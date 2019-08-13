@@ -28,16 +28,6 @@ public class ProcedureJdbcDao implements ProcedureDao {
     }
 
     @Override
-    public void update(Procedure procedure) {
-
-    }
-
-    @Override
-    public void delete() {
-
-    }
-
-    @Override
     public void close() {
         try {
             connection.close();
@@ -72,7 +62,7 @@ public class ProcedureJdbcDao implements ProcedureDao {
     public List<Procedure> findProceduresByLanguageId(Integer languageId) {
         List<Procedure> records = new ArrayList<>();
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `procedure` where language_id=?")) {
+        try (PreparedStatement statement = connection.prepareStatement("select * from `procedure_table` where language_id=?")) {
             statement.setInt(1, languageId);
             ResultSet resultSet = statement.executeQuery();
 
@@ -94,7 +84,7 @@ public class ProcedureJdbcDao implements ProcedureDao {
     public Procedure findProcedureByCodeAndLanguageId(Integer procedureCode, Integer languageId) {
         Procedure procedure = null;
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `procedure` where code=? and language_id=?")) {
+        try (PreparedStatement statement = connection.prepareStatement("select * from `procedure_table` where code=? and language_id=?")) {
             statement.setInt(1, procedureCode);
             statement.setInt(2, languageId);
 

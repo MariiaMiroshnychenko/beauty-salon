@@ -13,6 +13,7 @@ import model.service.impl.RecordServiceImpl;
 import model.service.impl.UserServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.*;
 
@@ -30,7 +31,7 @@ public class MasterPageSchedule implements Command {
         LanguageService languageService = new LanguageServiceImpl();
         UserService userService = new UserServiceImpl();
 
-        List<Record> records = recordService.findRecordsByDateAndMasterId(date, user.getId());
+        List<Record> records = recordService.findRecordsByDateAndMasterId(LocalDate.parse(date), user.getId());
 
         records.forEach(record -> {
             record.setProcedure(

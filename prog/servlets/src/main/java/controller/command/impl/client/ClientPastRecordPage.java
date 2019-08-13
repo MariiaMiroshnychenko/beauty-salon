@@ -1,10 +1,13 @@
 package controller.command.impl.client;
 
+import container.Query;
 import controller.command.Command;
 import model.entity.Record;
 import model.entity.User;
 import model.service.*;
 import model.service.impl.*;
+import model.service.user.ClientService;
+import model.service.user.impl.ClientServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
@@ -17,26 +20,13 @@ public class ClientPastRecordPage implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
+        ClientService clientService = new ClientServiceImpl();
+
         User user = (User) request.getSession().getAttribute("user");
         String language = request.getParameter("language");
 
-        RecordService recordService = new RecordServiceImpl();
-        ProcedureService procedureService = new ProcedureServiceImpl();
-        LanguageService languageService = new LanguageServiceImpl();
-        UserService userService = new UserServiceImpl();
+        request.setAttribute("pastRecords", clientService.futureOrPastRecords(user, language, Query.PAST_RECORDS));
 
-        List<Record> pastRecords = recordService.executeQuery(
-                "select * from record where client_id=? and record_date < ? or record_date = ? and `time` < ?",
-                user.getId(), LocalDate.now().toString(), LocalDate.now().toString(), LocalTime.now());
-
-        pastRecords.forEach(record -> record.setProcedure(
-                procedureService.findProcedureByCodeAndLanguageId(
-                        procedureService.findProcedureById(record.getProcedureId()).getCode(),
-                        languageService.findLanguageByLocale(language).getId())));
-
-        pastRecords.forEach(record -> record.setMaster(userService.findUserById(record.getMasterId())));
-
-        request.setAttribute("pastRecords", pastRecords);
         return "/WEB-INF/view/client/client-past-records.jsp";
     }
 

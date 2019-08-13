@@ -1,9 +1,12 @@
 package controller.command.impl.client;
 
+import container.ConstantWorkHour;
 import controller.command.Command;
 import model.entity.*;
 import model.service.*;
 import model.service.impl.*;
+import model.service.user.ClientService;
+import model.service.user.impl.ClientServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
@@ -15,40 +18,22 @@ public class ClientAppointmentConfirm implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
-        String date = request.getParameter("date");
-        String lang = request.getParameter("language");
-
-        RecordService recordService = new RecordServiceImpl();
+        ClientService clientService = new ClientServiceImpl();
         LanguageService languageService = new LanguageServiceImpl();
         ProcedureService procedureService = new ProcedureServiceImpl();
 
+        String date = request.getParameter("date");
+        String lang = request.getParameter("language");
+
         if (Objects.nonNull(date)) {
-            List<LocalTime> unavailableTimes = new ArrayList<>();
-            List<LocalTime> availableTimes = new ArrayList<>();
-
-            recordService.findRecordsByDateAndMasterId(date, Integer.valueOf(request.getParameter("masterId")))
-                    .forEach(record -> unavailableTimes.add(record.getTime()));
-
-            int beginHour = 10;
-            int minute = 0;
-            int endHour = 19;
-            LocalTime availableTime;
-
-            while (beginHour < endHour) {
-                availableTime = LocalTime.of(beginHour, minute);
-                if (unavailableTimes.contains(availableTime) || LocalDate.parse(date).equals(LocalDate.now()) && availableTime.compareTo(LocalTime.now()) < 0) {
-                    beginHour++;
-                    continue;
-                }
-
-                availableTimes.add(availableTime);
-                beginHour++;
-            }
-
             Language language = languageService.findLanguageByLocale(lang);
             List<Procedure> procedures = procedureService.findProceduresByLanguageId(language.getId());
 
-            request.getSession().setAttribute("availableTimes", availableTimes);
+            request.getSession().setAttribute("availableTimes", clientService.availableTime(
+                    LocalDate.parse(date), request.getParameter("masterId"),
+                    ConstantWorkHour.BEGIN_HOUR, ConstantWorkHour.END_HOUR, ConstantWorkHour.MINUTE
+            ));
+
             request.getSession().setAttribute("procedures", procedures);
         }
         return "/WEB-INF/view/client/make-appointment-confirm.jsp";

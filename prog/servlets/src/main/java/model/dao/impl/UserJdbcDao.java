@@ -37,16 +37,6 @@ public class UserJdbcDao implements UserDao {
     }
 
     @Override
-    public void update(User user) {
-
-    }
-
-    @Override
-    public void delete() {
-
-    }
-
-    @Override
     public void close() {
         try {
             connection.close();

@@ -4,8 +4,11 @@ import controller.command.Command;
 import model.entity.Record;
 import model.service.*;
 import model.service.impl.*;
+import model.service.user.AdminService;
+import model.service.user.impl.AdminServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.*;
 
@@ -14,43 +17,19 @@ public class AdminPageRecord implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
+        AdminService adminService = new AdminServiceImpl();
+        ScheduleService scheduleService = new ScheduleServiceImpl();
+
         String date = request.getParameter("date");
         String language = request.getParameter("language");
 
+        if (Objects.nonNull(date)) {
+            Map<LocalTime, List<Record>> scheduleForDateMap =
+                    adminService.sortedRecordsByTime(LocalDate.parse(date), language);
 
-
-        if(Objects.nonNull(date)) {
-            RecordService recordService = new RecordServiceImpl();
-            LanguageService languageService = new LanguageServiceImpl();
-            ProcedureService procedureService = new ProcedureServiceImpl();
-            UserService userService = new UserServiceImpl();
-            ScheduleService scheduleService = new ScheduleServiceImpl();
-
-            int beginHour = 10;
-            int endHour = 18;
-            int minute = 0;
-
-            List<Record> recordsForDay;
-            Map<LocalTime, List<Record>> scheduleForDateMap = new TreeMap<>();
-            LocalTime time;
-
-            while (beginHour <= endHour) {
-                time = LocalTime.of(beginHour, minute);
-                recordsForDay = recordService.findRecordsByDateAndTime(date, time);
-
-                recordsForDay.forEach(record -> record.setMaster(userService.findUserById(record.getMasterId())));
-
-                recordsForDay.forEach(record ->
-                        record.setProcedure(procedureService.findProcedureByCodeAndLanguageId(
-                                procedureService.findProcedureById(record.getProcedureId()).getCode(),
-                                languageService.findLanguageByLocale(language).getId())));
-
-                scheduleForDateMap.put(time, recordsForDay);
-                beginHour++;
-            }
-                request.setAttribute("times", scheduleForDateMap.keySet());
-                request.setAttribute("records", scheduleForDateMap.values());
-                request.setAttribute("masters", scheduleService.findMastersByDay(date));
+            request.setAttribute("times", scheduleForDateMap.keySet());
+            request.setAttribute("records", scheduleForDateMap.values());
+            request.setAttribute("masters", scheduleService.findMastersByDay(LocalDate.parse(date)));
         }
         return "/WEB-INF/view/admin/adminPageMasters.jsp";
     }

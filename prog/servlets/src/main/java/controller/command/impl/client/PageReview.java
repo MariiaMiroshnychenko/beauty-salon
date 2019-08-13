@@ -5,6 +5,8 @@ import model.entity.Record;
 import model.entity.User;
 import model.service.*;
 import model.service.impl.*;
+import model.service.user.ClientService;
+import model.service.user.impl.ClientServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
@@ -14,34 +16,13 @@ public class PageReview implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
+        ClientService clientService = new ClientServiceImpl();
+
         User user = (User) request.getSession().getAttribute("user");
         String language = request.getParameter("language");
 
-        RecordService recordService = new RecordServiceImpl();
-        UserService userService = new UserServiceImpl();
-        LanguageService languageService = new LanguageServiceImpl();
-        ProcedureService procedureService = new ProcedureServiceImpl();
-        FeedbackService feedbackService = new FeedbackServiceImpl();
+        request.setAttribute("recordsWithoutFeedback", clientService.uncheckedRecords(user, language));
 
-        List<Record> records = recordService.findRecordsByUserId(user.getId(), user.getRole());
-
-        records.forEach(record -> record.setMaster(userService.findUserById(record.getMasterId())));
-
-        records.forEach(record -> record.setProcedure(procedureService.findProcedureByCodeAndLanguageId(
-                procedureService.findProcedureById(record.getProcedureId()).getCode(),
-                languageService.findLanguageByLocale(language).getId())));
-
-        records.forEach(record -> record.setClient(user));
-
-        List<Record> uncheckedRecords = new ArrayList<>();
-
-        records.forEach(record -> {
-                    if (Objects.isNull(feedbackService.findReviewByRecordId(record.getId()))) {
-                        uncheckedRecords.add(record);
-                    }
-                }
-        );
-        request.setAttribute("recordsWithoutFeedback", uncheckedRecords);
         return "/WEB-INF/view/client/review.jsp";
     }
 

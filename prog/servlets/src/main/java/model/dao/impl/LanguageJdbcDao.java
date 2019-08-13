@@ -30,16 +30,6 @@ public class LanguageJdbcDao implements LanguageDao {
     }
 
     @Override
-    public void update(Language language) {
-
-    }
-
-    @Override
-    public void delete() {
-
-    }
-
-    @Override
     public void close() {
         try {
             connection.close();

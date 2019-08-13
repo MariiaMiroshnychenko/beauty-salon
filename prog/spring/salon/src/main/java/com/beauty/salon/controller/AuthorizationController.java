@@ -1,5 +1,6 @@
 package com.beauty.salon.controller;
 
+import com.beauty.salon.container.PagePath;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AuthorizationController {
     @GetMapping
     public String getAuthorizationPage() {
-        return "page/authorization";
+        return PagePath.PAGE_AUTHORIZATION;
     }
 }

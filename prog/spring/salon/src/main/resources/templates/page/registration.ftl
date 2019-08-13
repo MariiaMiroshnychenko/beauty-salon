@@ -1,4 +1,4 @@
-<#import "parts/part-style.ftl" as style>
+<#import "../parts/part-style.ftl" as style>
 <!doctype html>
 <html lang="en">
 <head>

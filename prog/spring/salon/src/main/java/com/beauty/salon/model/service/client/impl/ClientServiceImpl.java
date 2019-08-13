@@ -21,9 +21,9 @@ public class ClientServiceImpl implements ClientService {
         this.recordRepository = recordRepository;
     }
 
-    private List<LocalTime> unavailableTimeList(String date, Integer masterId) {
+    private List<LocalTime> unavailableTimeList(LocalDate date, Integer masterId) {
         List<LocalTime> unavailableTimes = new ArrayList<>();
-        List<Record> recordList = recordRepository.findRecordsByRecordDateAndMasterId(date, masterId);
+        List<Record> recordList = recordRepository.findRecordsByRecordDateAndMasterId_Id(date, masterId);
 
         recordList.forEach(record -> unavailableTimes.add(record.getTime()));
 
@@ -44,11 +44,10 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public List<LocalTime> availableTimes(String date, Integer masterId, int beginHour, int endHour, int minute) {
+    public List<LocalTime> availableTimes(LocalDate date, Integer masterId, int beginHour, int endHour, int minute) {
         return workingTimeList(beginHour, endHour, minute)
                 .stream().filter(time -> !unavailableTimeList(date, masterId).contains(time) ||
-                        LocalDate.parse(date).equals(LocalDate.now()) &&
-                                time.compareTo(LocalTime.now()) > 0)
+                        date.equals(LocalDate.now()) && time.compareTo(LocalTime.now()) > 0)
                 .collect(Collectors.toList());
     }
 }

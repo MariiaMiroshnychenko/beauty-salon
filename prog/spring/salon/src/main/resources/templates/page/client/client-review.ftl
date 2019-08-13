@@ -9,7 +9,7 @@
     <title>${rc.getMessage("user.role.client")}</title>
     <style>
         body {
-            background: url(http://localhost:8081/images/dc4c183f-da97-4c3b-910e-37bb8c38ae49.png) no-repeat center center fixed;
+            background: url(http://localhost:8081/images/kisspng-ballet-dancer-drawing-painting-5c0d8256b97290.1365284715443892067596.png) no-repeat center center fixed;
             background-size: cover;
         }
     </style>
@@ -27,23 +27,22 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a href="/client/make-appointment" class="nav-link">${rc.getMessage("appointments")}</a>
             </li>
-
             <#if notifications?has_content>
             <li class="nav-item">
                 <a href="/client/notification" class="nav-link">${rc.getMessage("notifications")}(${notificationsAmount})</a>
             </li>
-            <#else>
-                <li class="nav-item">
-                    <a href="/client/notification" class="nav-link">${rc.getMessage("notifications")}</a>
-                </li>
+            <#else><li class="nav-item">
+                <a href="/client/notification" class="nav-link">${rc.getMessage("notifications")}</a>
+            </li>
             </#if>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-                <a class="nav-link" aria-disabled="true">${rc.getMessage("hi.user")}, ${client.username}</a></li>
+
+            <li class="nav-item ">
+                <a class="nav-link">${rc.getMessage("hi.user")}, ${client.username}</a></li>
 
             <li class="nav-item">
                 <a class="nav-link">
@@ -67,82 +66,50 @@
         </ul>
     </div>
 </nav>
-
-<div class="row">
-    <#if notifications.content?has_content>
-        <div class="column" style="padding: 10px 35% 5px 5%">
-        <#list notifications.content as n>
-        <div>
-            <table>
-                <tbody style="background-color: #f4d3ff">
-                <tr>
-                    <td>${rc.getMessage("from")}: <b>beauty_salon</b></td>
-                </tr>
-                <tr>
-                    <td>${rc.getMessage("to")}: ${client.username}</td>
-                </tr>
-                <tr>
-                    <td>${n.text}</td>
-                </tr>
-                <tr>
-                    <td>
-                        ${rc.getMessage("to.leave.feedback")} <a
-                            href="/client/feedback?master=${n.recordId.masterId.id}&masterName=${n.recordId.masterId.name}&masterSurname=${n.recordId.masterId.surname}&procedure=${n.recordId.procedureId.name}&record=${n.recordId.id}&email=${n.id}">${rc.getMessage("this.link")}</a>
-                    </td>
-                </tr>
-                </tbody>
-            </table><br/>
-        </#list>
-
-        <#if notifications.getTotalPages() gt 7>
-            <#assign
-            totalPages = notifications.getTotalPages()
-            pageNumber = notifications.getNumber() + 1
-
-            head = (pageNumber > 4)?then([1, -1], [1, 2, 3])
-            tail = (pageNumber < totalPages - 3)?then([-1, totalPages], [totalPages - 2, totalPages - 1, totalPages])
-            bodyBefore = (pageNumber > 4 && pageNumber < totalPages - 1)?then([pageNumber - 2, pageNumber - 1], [])
-            bodyAfter = (pageNumber > 2 && pageNumber < totalPages - 3)?then([pageNumber + 1, pageNumber + 2], [])
-
-            body = head + bodyBefore + (pageNumber > 3 && pageNumber < totalPages - 2)?then([pageNumber], []) + bodyAfter + tail
-            >
-        <#else>
-            <#assign body = 1..notifications.getTotalPages()>
-        </#if>
+<br/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="column" style="width: 40%">
         </div>
-        <div>
-            <ul class="pagination pagination-sm">
-                <li class="page-item disabled">
-                    <a class="page-link" href="" tabindex="-1">${rc.getMessage("pages")}</a>
-                </li>
-    <#list body as p>
-        <#if (p - 1) == notifications.getNumber()>
-        <li class="page-item active">
-            <a class="page-link" href="#" tabindex="-1">${p}</a>
-        </li>
-        <#elseif p == -1>
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">...</a>
-                    </li>
-        <#else>
-                    <li class="page-item">
-                        <a class="page-link" href="/client/notification?page=${p - 1}&size=${notifications.getSize()}"
-                           tabindex="-1">${p}</a>
-                    </li>
-        </#if>
-    </#list>
-            </ul>
+        <div class="column" style="width: 55%">
+            <div class="alert" style="background-color: #f4d3ff">
+                <i>${rc.getMessage("procedure")}:</i> <strong>${procedure}</strong>
+                <input type="hidden" id="procedure" value="${procedure}">
+                <input type="hidden" id="record" value="${record}">
+                <input type="hidden" id="email" value="${email}">
+                <i>${rc.getMessage("user.role.master")}:</i> <strong>${masterName} ${masterSurname}</strong><br/>
+                <input type="hidden" id="masterName" value="${masterName}">
+                <input type="hidden" id="masterSurname" value="${masterSurname}">
+                <form method="post" action="/client/feedback/submit">
+                    <input type="hidden" id="record" name="record" value="${record}">
+                    <input type="hidden" id="master" name="master" value="${master}">
+                    <input type="hidden" id="email" name="email" value="${email}">
+                    <input type="hidden" name="lang" value="${.lang}">
+                ${rc.getMessage("feedback.text")}
+                    <textarea id="feedbackText" name="feedbackText" class="form-control"></textarea>
+                    <input type="hidden" name="_csrf" value="${_csrf.token}">
+                    <input type="submit" value="${rc.getMessage("submit")}" class="form-control button"
+                           style="width: 200px">
+                </form>
+            </div>
         </div>
+        <div class="column" style="width: 5%"></div>
     </div>
-    <#else><label style="padding: 30px;">${rc.getMessage("no.notifications")}</label>
-    </#if>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
         $("#locales").change(function () {
             var selectedOption = $('#locales').val();
+            var selectedMaster = $('#master').val();
+            var selectedMasterName = $('#masterName').val();
+            var selectedMasterSurname = $('#masterSurname').val();
+            var selectedProcedure = $('#procedure').val();
+            var selectedRecord = $('#record').val();
+            var selectedEmail = $('#email').val();
             if (selectedOption != '') {
-                window.location.replace('?lang=' + selectedOption);
+                window.location.replace('?master=' + selectedMaster + '&masterName=' + selectedMasterName +
+                        '&masterSurname=' + selectedMasterSurname +'&procedure=' + selectedProcedure +
+                        '&record=' + selectedRecord + '&email=' + selectedEmail +'&lang=' + selectedOption);
             }
         });
     });

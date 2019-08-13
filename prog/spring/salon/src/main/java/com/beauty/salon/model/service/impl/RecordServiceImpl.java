@@ -26,8 +26,8 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public List<Record> findRecordsByDateAndMasterId(String date, Integer masterId) {
-        return recordRepository.findRecordsByRecordDateAndMasterId(date, masterId);
+    public List<Record> findRecordsByDateAndMasterId(LocalDate date, Integer masterId) {
+        return recordRepository.findRecordsByRecordDateAndMasterId_Id(date, masterId);
     }
 
     @Override
@@ -36,17 +36,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public List<Record> findRecordsByClientIdAndDateAndTimeLessNow(User user, LocalDate dateNow, LocalTime time) {
-        return recordRepository.findRecordsByClientIdAndRecordDateBeforeOrRecordDateEqualsAndTimeBefore(user, dateNow, dateNow, time);
-    }
-
-    @Override
-    public List<Record> findRecordsByClientIdAndDateAndTimeMoreNow(User user, LocalDate date, LocalTime time) {
-        return recordRepository.findRecordsByClientIdAndRecordDateAfterOrRecordDateEqualsAndTimeAfter(user, date, date, time);
-    }
-
-    @Override
-    public List<Record> findRecordsByDateAndTime(String date, LocalTime time) {
+    public List<Record> findRecordsByDateAndTime(LocalDate date, LocalTime time) {
         return recordRepository.findRecordsByRecordDateAndTime(date, time);
     }
 

@@ -31,9 +31,14 @@
                 <a class="nav-link" href="/client/make-appointment">${rc.getMessage("appointments")}</a>
             </li>
 
-            <li class="nav-item active">
+            <#if notifications?has_content>
+            <li class="nav-item">
+                <a href="/client/notification" class="nav-link">${rc.getMessage("notifications")}(${notificationsAmount})</a>
+            </li>
+            <#else><li class="nav-item">
                 <a href="/client/notification" class="nav-link">${rc.getMessage("notifications")}</a>
             </li>
+            </#if>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">
@@ -64,11 +69,12 @@
 <div class="container-fluid">
     <div class="row" style="padding: 6% 39%">
         <div class="alert alert-warning" style="background-color: #f4d3ff">
-            <form action="" method="get">
+            <form action="/client/make-appointment/select-date/send-confirmation" method="post">
                 <table>
                     <thead>
                     <tr>
                         <td style="width: 150px">${rc.getMessage("your.choice")}</td>
+                        <td></td>
                     </tr>
                     </thead>
                     <tbody>
@@ -108,6 +114,8 @@
                     <tr>
                         <td></td>
                         <td align="center" style="padding: 10px">
+                            <input type="hidden" id="lang" name="lang" value="${.lang}">
+                            <input type="hidden" name="_csrf" value="${_csrf.token}">
                             <input type="submit" class="form-control button btn-success" style="width: 230px"
                                    value="${rc.getMessage("record.status.able")}"/>
                         </td>

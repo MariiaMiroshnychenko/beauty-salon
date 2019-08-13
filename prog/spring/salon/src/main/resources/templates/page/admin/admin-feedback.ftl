@@ -46,7 +46,8 @@
                 <a class="nav-link">
                     <form method="post" action="/logout">
                         <input type="hidden" name="_csrf" value="${_csrf.token}">
-                        <input type="submit" class="form-control" style="background: #292829" value="${rc.getMessage("logout")}">
+                        <input type="submit" class="form-control" style="background: #292829"
+                               value="${rc.getMessage("logout")}">
                     </form>
                 </a>
             </li>
@@ -81,34 +82,77 @@
                     <input type="submit" style="width: 250px" class="form-control">
                 </form>
             </fieldset>
+            <br/>
+            <div style="align-content: center">
             <#if reviewsForMasterNonNull>
-            <table>
-                <thead>
-                <tr>
-                    <td align="center">${rc.getMessage("visit.date")}</td>
-                    <td align="center" style="width: 300px">${rc.getMessage("procedure")}</td>
-                    <td align="center">${rc.getMessage("user.role.master")}</td>
-                    <td align="center" style="width: 300px">${rc.getMessage("feedback.text")}</td>
-                    <td align="center">${rc.getMessage("user.role.client")}</td>
-                </tr>
-                </thead>
-            <tbody>
-
-                <#list reviewsForMaster as rev>
+                <table class="table-bordered" style="background-color: whitesmoke">
+                    <thead>
                     <tr>
-                        <td>${rev.recordId.recordDate}</td>
-                        <td>${rev.recordId.procedureId.name}</td>
-                        <td>
-                            <input type="hidden" id="selectedMasterId" name="selectedMasterId"
-                                   value="${rev.masterId.id}">
-                            ${rev.masterId.name} ${rev.masterId.surname}</td>
-                        <td style="width: 300px">${rev.text}</td>
-                        <td>${rev.clientId.username}</td>
+                        <td align="center">${rc.getMessage("visit.date")}</td>
+                        <td align="center">${rc.getMessage("procedure")}</td>
+                        <td align="center">${rc.getMessage("user.role.master")}</td>
+                        <td align="center" style="width: 300px">${rc.getMessage("feedback.text")}</td>
+                        <td align="center">${rc.getMessage("user.role.client")}</td>
                     </tr>
+                    </thead>
+                    <tbody>
+
+                <#list reviewsForMaster.content as rev>
+                <tr style="padding: 5px">
+                    <td align="center" style="width: 100px">${rev.recordId.recordDate}</td>
+                    <td align="center" style="width: 150px">${rev.recordId.procedureId.name}</td>
+                    <td align="center" style="width: 200px">
+                        <input type="hidden" id="selectedMasterId" name="selectedMasterId"
+                               value="${rev.masterId.id}">
+                        ${rev.masterId.name} ${rev.masterId.surname}</td>
+                    <td style="width: 300px">${rev.text}</td>
+                    <td align="center" style="width: 150px">${rev.clientId.username}</td>
+                </tr>
                 </#list>
+
+                    </tbody>
+                </table>
+                <#if reviewsForMaster.getTotalPages() gt 7>
+                    <#assign
+                    totalPages = reviewsForMaster.getTotalPages()
+                    pageNumber = reviewsForMaster.getNumber() + 1
+
+                    head = (pageNumber > 4)?then([1, -1], [1, 2, 3])
+                    tail = (pageNumber < totalPages - 3)?then([-1, totalPages], [totalPages - 2, totalPages - 1, totalPages])
+                    bodyBefore = (pageNumber > 4 && pageNumber < totalPages - 1)?then([pageNumber - 2, pageNumber - 1], [])
+                    bodyAfter = (pageNumber > 2 && pageNumber < totalPages - 3)?then([pageNumber + 1, pageNumber + 2], [])
+
+                    body = head + bodyBefore + (pageNumber > 3 && pageNumber < totalPages - 2)?then([pageNumber], []) + bodyAfter + tail
+                    >
+                <#else>
+                    <#assign body = 1..reviewsForMaster.getTotalPages()>
+                </#if>
+                <div style="padding: 5px 0 0 0;">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="" tabindex="-1">${rc.getMessage("pages")}</a>
+                        </li>
+    <#list body as p>
+        <#if (p - 1) == reviewsForMaster.getNumber()>
+        <li class="page-item active">
+            <a class="page-link" href="#" tabindex="-1">${p}</a>
+        </li>
+        <#elseif p == -1>
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">...</a>
+                    </li>
+        <#else>
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="/admin/master-feedback/submit?master=${master}&lang=${.lang}&page=${p - 1}&size=${reviewsForMaster.getSize()}"
+                           tabindex="-1">${p}</a>
+                    </li>
+        </#if>
+    </#list>
+                    </ul>
+                </div>
             </#if>
-        </tbody>
-        </table>
+            </div>
         </div>
     </div>
 </div>

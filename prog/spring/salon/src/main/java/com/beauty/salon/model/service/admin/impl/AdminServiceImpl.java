@@ -7,6 +7,8 @@ import com.beauty.salon.model.repository.ProcedureRepository;
 import com.beauty.salon.model.repository.RecordRepository;
 import com.beauty.salon.model.service.admin.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -30,7 +32,7 @@ public class AdminServiceImpl implements AdminService {
         this.procedureRepository = procedureRepository;
     }
 
-    private void setProcedureFeedbackByLocale(List<Feedback> feedback, String locale) {
+    private void setProcedureFeedbackByLocale(Page<Feedback> feedback, String locale) {
         feedback.forEach(fb ->
                 fb.getRecordId().setProcedureId(
                         procedureRepository.findProcedureByCodeAndLanguageId_Locale(
@@ -44,8 +46,8 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public List<Feedback> findFeedbacksByMasterId(Integer masterId, String locale) {
-        List<Feedback> feedbackForMasterId = feedbackRepository.findAllByMasterId_Id(masterId);
+    public Page<Feedback> findFeedbacksByMasterId(Integer masterId, String locale, Pageable pageable) {
+        Page<Feedback> feedbackForMasterId = feedbackRepository.findAllByMasterId_Id(masterId, pageable);
 
         setProcedureFeedbackByLocale(feedbackForMasterId, locale);
 
@@ -53,7 +55,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public Map<LocalTime, List<Record>> sortedRecordsByTime(String date, String locale) {
+    public Map<LocalTime, List<Record>> sortedRecordsByTime(LocalDate date, String locale) {
         int beginHour = 10;
         int endHour = 18;
         int minute = 0;

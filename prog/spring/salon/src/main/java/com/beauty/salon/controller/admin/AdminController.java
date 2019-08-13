@@ -3,22 +3,20 @@ package com.beauty.salon.controller.admin;
 import com.beauty.salon.model.entity.Feedback;
 import com.beauty.salon.model.entity.Record;
 import com.beauty.salon.model.entity.User;
-import com.beauty.salon.model.service.FeedbackService;
-import com.beauty.salon.model.service.ProcedureService;
 import com.beauty.salon.model.service.ScheduleService;
 import com.beauty.salon.model.service.UserService;
 import com.beauty.salon.model.service.admin.AdminService;
 import com.beauty.salon.model.service.admin.impl.AdminServiceImpl;
-import com.beauty.salon.model.service.impl.FeedbackServiceImpl;
-import com.beauty.salon.model.service.impl.ProcedureServiceImpl;
 import com.beauty.salon.model.service.impl.ScheduleServiceImpl;
 import com.beauty.salon.model.service.impl.UserServiceImpl;
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -68,15 +66,19 @@ public class AdminController {
     @GetMapping("/master-feedback/submit")
     public String submitMasterForFeedbackPage(@RequestParam(name = "reviewsForMaster", required = false) List<Feedback> reviewsForMaster,
                                               @RequestParam(name = "master") Integer master,
-                                              @RequestParam(name = "lang") String lang, Model model) {
+                                              @RequestParam(name = "lang") String lang,
+                                              @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
+                                              Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = (User) authentication.getPrincipal();
-        List<Feedback> masterFeedback = adminService.findFeedbacksByMasterId(master, lang);
+        Page<Feedback> masterFeedback = adminService.findFeedbacksByMasterId(master, lang, pageable);
 
         model.addAttribute("admin", user);
         model.addAttribute("masters", userService.findUsersByRole("master"));
+        model.addAttribute("master", master);
         model.addAttribute("reviewsForMasterNonNull", masterFeedback != null);
         model.addAttribute("reviewsForMaster", masterFeedback);
+        model.addAttribute("page", masterFeedback);
 
         return "page/admin/admin-feedback";
     }
@@ -94,7 +96,7 @@ public class AdminController {
     }
 
     @GetMapping("/salon-schedule/date-selected")
-    public String selectDateForSchedule(@RequestParam(name = "date", required = false) String date,
+    public String selectDateForSchedule(@RequestParam(name = "date", required = false) LocalDate date,
                                         @RequestParam(name = "lang", required = false) String lang,
                                         Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -109,7 +111,7 @@ public class AdminController {
         model.addAttribute("dateNonNull", Objects.nonNull(masterRecordsMap));
         model.addAttribute("times", masterRecordsMap.keySet());
         model.addAttribute("records", masterRecordsMap.values());
-        model.addAttribute("masters", scheduleService.findMastersByDay(LocalDate.parse(date)));
+        model.addAttribute("masters", scheduleService.findMastersByDay(date));
 
         return "page/admin/adminPageSchedule";
     }

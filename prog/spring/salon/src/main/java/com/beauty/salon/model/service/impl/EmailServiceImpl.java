@@ -7,9 +7,12 @@ import com.beauty.salon.model.repository.EmailRepository;
 import com.beauty.salon.model.repository.ProcedureRepository;
 import com.beauty.salon.model.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 @Service
 public class EmailServiceImpl implements EmailService {
@@ -27,33 +30,37 @@ public class EmailServiceImpl implements EmailService {
         record.setProcedureId(procedureRepository.findProcedureByCodeAndLanguageId_Locale(
                 record.getProcedureId().getCode(), locale));
 
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("messages", new Locale(locale));
+
         StringBuilder emailTextBuilder = new StringBuilder();
 
         return emailTextBuilder
-                .append("dear").append(record.getClientId().getName()).append('!').append("\n")
-                .append(record.getRecordDate()).append(" ").append("visited")
-                .append(record.getProcedureId().getName()).append(". ")
-                .append("leave.feedback").toString();
+                .append(resourceBundle.getString("dear")).append(record.getClientId().getName()).append('!').append("\n")
+                .append(record.getRecordDate()).append(" ").append(resourceBundle.getString("visited"))
+                .append(record.getProcedureId().getName()).append("\". ")
+                .append(resourceBundle.getString("leave.feedback")).toString();
     }
 
     @Override
-    public Email createEmail(Record record, String locale) {
-        return Email.builder()
+    public void createEmail(Record record, String locale) {
+        emailRepository.saveAndFlush(Email.builder()
                 .clientId(record.getClientId())
                 .text(createEmailText(record, locale))
                 .recordId(record)
                 .status(true)
-                .build();
+                .build());
     }
 
     @Override
-    public void saveEmail(Email email) {
+    public void updateEmailStatus(Integer notificationId) {
+        Email email = emailRepository.getOne(notificationId);
+        email.setStatus(false);
         emailRepository.saveAndFlush(email);
     }
 
     @Override
-    public List<Email> findEmailsByClient(User client) {
-        return emailRepository.findEmailsByClientIdAndStatusIsTrue(client);
+    public Page<Email> findEmailsByClient(User client, Pageable pageable) {
+        return emailRepository.findEmailsByClientIdAndStatusIsTrue(client, pageable);
     }
 
     @Override

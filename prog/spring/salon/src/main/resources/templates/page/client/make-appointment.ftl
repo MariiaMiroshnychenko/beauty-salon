@@ -30,9 +30,14 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/client/make-appointment">${rc.getMessage("appointments")}</a></li>
 
-            <li class="nav-item active">
-                <a href="" class="nav-link">${rc.getMessage("notifications")}(${notificationsAmount})</a>
+            <#if notifications?has_content>
+            <li class="nav-item">
+                <a href="/client/notification" class="nav-link">${rc.getMessage("notifications")}(${notificationsAmount})</a>
             </li>
+            <#else><li class="nav-item">
+                <a href="/client/notification" class="nav-link">${rc.getMessage("notifications")}</a>
+            </li>
+            </#if>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">

@@ -7,47 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13796d41-fbb8-46b7-9b2d-997369343847" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/master/MasterController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/master/MasterService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/master/impl/MasterServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/MainController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/client/ClientAppointmentConfirmationController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/client/ClientAppointmentController.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/filter/AuthenticationFilter.java" afterPath="$PROJECT_DIR$/src/main/java/controller/filter/AuthenticationFilter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/masterPage.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/config/security/UserAuthenticationSuccessHandler.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/config/security/UserAuthenticationSuccessHandler.java" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/config/security/WebSecurityConfig.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/admin/AdminController.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/admin/AdminController.java" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/Authorization.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/Logout.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/client/ClientAppointmentConfirm.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/client/ClientAppointmentSubmit.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/client/ClientController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/client/ClientController.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/client/ClientFeedbackController.java" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/client/PageReview.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/client/PageReviewSubmit.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/Registration.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/admin/AdminPageRecord.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/client/ClientAppointment.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/client/ClientAppointmentConfirm.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/client/ClientAppointmentDate.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/client/ClientAppointmentSubmit.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/client/ClientFutureRecordPage.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/client/ClientPastRecordPage.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/client/PageReview.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/client/PageReviewSubmit.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/master/MasterPage.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/command/impl/master/MasterPageSchedule.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/master/MasterController.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/controller/master/MasterController.java" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/repository/RecordRepository.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/repository/RecordRepository.java" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/repository/ScheduleRepository.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/repository/ScheduleRepository.java" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/EmailService.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/EmailService.java" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/RecordService.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/RecordService.java" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/ScheduleService.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/ScheduleService.java" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/admin/AdminService.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/admin/AdminService.java" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/admin/impl/AdminServiceImpl.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/admin/impl/AdminServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/client/ClientService.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/client/ClientService.java" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/client/impl/ClientServiceImpl.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/client/impl/ClientServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/impl/EmailServiceImpl.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/impl/EmailServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/impl/RecordServiceImpl.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/impl/RecordServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/impl/ScheduleServiceImpl.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/impl/ScheduleServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/master/MasterService.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/master/MasterService.java" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/master/impl/MasterServiceImpl.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/model/service/master/impl/MasterServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/messages.properties" afterPath="$PROJECT_DIR$/../spring/salon/src/main/resources/messages.properties" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/messages_en.properties" afterPath="$PROJECT_DIR$/../spring/salon/src/main/resources/messages_en.properties" />
       <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/messages_uk.properties" afterPath="$PROJECT_DIR$/../spring/salon/src/main/resources/messages_uk.properties" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/admin/admin-feedback.ftl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/admin/admin-menu.ftl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/admin/adminPageMasters.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/authorization.ftl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/client/client-future-records.ftl" afterPath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/client/client-future-records.ftl" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/master/masterSchedule.ftl" afterPath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/master/masterSchedule.ftl" />
-      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/masterPage.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/page/client/client-notification.ftl" afterPath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/page/client/client-notification.ftl" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/page/client/make-appointment-confirm.ftl" afterPath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/page/client/make-appointment-confirm.ftl" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/page/client/review.jsp" afterPath="$PROJECT_DIR$/../spring/salon/src/main/resources/templates/page/client/client-review.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,124 +65,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LanguageJdbcDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/LanguageJdbcDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="54" column="101" lean-forward="false" selection-start-line="54" selection-start-column="101" selection-end-line="54" selection-end-column="101" />
-              <folding>
-                <marker date="1565529736603" expanded="true" signature="1240:1285" ph="select * fro... language_table" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProcedureJdbcDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/ProcedureJdbcDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="52" column="102" lean-forward="false" selection-start-line="52" selection-start-column="102" selection-end-line="52" selection-end-column="102" />
-              <folding>
-                <marker date="1565529736534" expanded="true" signature="1218:1260" ph="select * fro... procedure_table" />
-                <marker date="1565529736534" expanded="true" signature="1979:2024" ph="select * fro... procedure" />
-                <marker date="1565529736534" expanded="true" signature="2765:2821" ph="select * fro... procedure" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecordJdbcDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/RecordJdbcDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2625">
-              <caret line="115" column="43" lean-forward="false" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="43" />
-              <folding>
-                <marker date="1565529736577" expanded="true" signature="668:773" ph="INSERT INTO record_table... " />
-                <marker date="1565529736577" expanded="true" signature="3524:3561" ph="SELECT * FRO... record_table" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleJdbcDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/ScheduleJdbcDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1025">
-              <caret line="57" column="101" lean-forward="false" selection-start-line="57" selection-start-column="101" selection-end-line="57" selection-end-column="101" />
-              <folding>
-                <marker date="1565529736591" expanded="true" signature="1403:1464" ph="select * fro... schedule_table" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserJdbcDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/UserJdbcDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2375">
-              <caret line="105" column="97" lean-forward="false" selection-start-line="105" selection-start-column="97" selection-end-line="105" selection-end-column="97" />
-              <folding>
-                <marker date="1565529736550" expanded="true" signature="665:764" ph="insert into `user`... " />
-                <marker date="1565529736550" expanded="true" signature="1659:1702" ph="select * fro... user" />
-                <marker date="1565529736550" expanded="true" signature="2339:2376" ph="select * fro... user" />
-                <marker date="1565529736550" expanded="true" signature="3034:3073" ph="select * fro... user" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MasterPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Authorization.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/Authorization.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthenticationFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/filter/AuthenticationFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="78" column="44" lean-forward="false" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="make-appointment.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/make-appointment.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="153" column="114" lean-forward="false" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="114" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MasterPageSchedule.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPageSchedule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -406,7 +278,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
@@ -415,26 +287,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
@@ -443,102 +295,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -563,8 +319,12 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="model.mapper" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view\client" />
+      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view\admin" />
+      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view" />
+      <recent name="D:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp" />
+      <recent name="D:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view\master" />
@@ -580,12 +340,8 @@
       <recent name="controller.command.impl.get.client" />
       <recent name="controller.command.impl" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view\client" />
-      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view\admin" />
-      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view" />
-      <recent name="D:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp" />
-      <recent name="D:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="model.mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -897,7 +653,7 @@
       <workItem from="1565344347251" duration="5084000" />
       <workItem from="1565423560683" duration="597000" />
       <workItem from="1565510426046" duration="9565000" />
-      <workItem from="1565595610579" duration="1187000" />
+      <workItem from="1565595610579" duration="1804000" />
     </task>
     <servers />
   </component>
@@ -934,7 +690,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="386114000" />
+    <option name="totallyTimeSpent" value="386731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -954,7 +710,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22986037" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22986037" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08807734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1291,9 +1047,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1329,9 +1083,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="54" column="101" lean-forward="false" selection-start-line="54" selection-start-column="101" selection-end-line="54" selection-end-column="101" />
-          <folding>
-            <marker date="1565529736603" expanded="true" signature="1240:1285" ph="select * fro... language_table" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,11 +1091,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="52" column="102" lean-forward="false" selection-start-line="52" selection-start-column="102" selection-end-line="52" selection-end-column="102" />
-          <folding>
-            <marker date="1565529736534" expanded="true" signature="1218:1260" ph="select * fro... procedure_table" />
-            <marker date="1565529736534" expanded="true" signature="1979:2024" ph="select * fro... procedure" />
-            <marker date="1565529736534" expanded="true" signature="2765:2821" ph="select * fro... procedure" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1351,10 +1099,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2625">
           <caret line="115" column="43" lean-forward="false" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="43" />
-          <folding>
-            <marker date="1565529736577" expanded="true" signature="668:773" ph="INSERT INTO record_table... " />
-            <marker date="1565529736577" expanded="true" signature="3524:3561" ph="SELECT * FRO... record_table" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,9 +1107,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1025">
           <caret line="57" column="101" lean-forward="false" selection-start-line="57" selection-start-column="101" selection-end-line="57" selection-end-column="101" />
-          <folding>
-            <marker date="1565529736591" expanded="true" signature="1403:1464" ph="select * fro... schedule_table" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,12 +1115,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2375">
           <caret line="105" column="97" lean-forward="false" selection-start-line="105" selection-start-column="97" selection-end-line="105" selection-end-column="97" />
-          <folding>
-            <marker date="1565529736550" expanded="true" signature="665:764" ph="insert into `user`... " />
-            <marker date="1565529736550" expanded="true" signature="1659:1702" ph="select * fro... user" />
-            <marker date="1565529736550" expanded="true" signature="2339:2376" ph="select * fro... user" />
-            <marker date="1565529736550" expanded="true" signature="3034:3073" ph="select * fro... user" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>

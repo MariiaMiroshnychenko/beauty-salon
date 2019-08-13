@@ -7,6 +7,7 @@ import com.beauty.salon.model.service.master.MasterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
@@ -30,8 +31,8 @@ public class MasterServiceImpl implements MasterService {
                         record.getProcedureId().getCode(), locale)));
     }
 
-    private List<Record> masterRecordsByDateAndMasterId(String date, Integer masterId, String locale) {
-        List<Record> masterRecords = recordRepository.findRecordsByRecordDateAndMasterId(date, masterId);
+    private List<Record> masterRecordsByDateAndMasterId(LocalDate date, Integer masterId, String locale) {
+        List<Record> masterRecords = recordRepository.findRecordsByRecordDateAndMasterId_Id(date, masterId);
 
         setProcedureByLocale(masterRecords, locale);
 
@@ -49,7 +50,7 @@ public class MasterServiceImpl implements MasterService {
     }
 
     @Override
-    public Map<LocalTime, Record> masterSchedule(String date, Integer masterId, String locale,
+    public Map<LocalTime, Record> masterSchedule(LocalDate date, Integer masterId, String locale,
                                                  int beginHour, int endHour, int minute) {
         Map<LocalTime, Record> recordMap = new TreeMap<>();
 

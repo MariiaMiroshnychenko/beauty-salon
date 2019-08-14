@@ -23,7 +23,7 @@
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Client</title>
+    <title><fmt:message key="user.role.client"/></title>
     <style>
         body {
             background: url(http://localhost:8080/images/dc4c183f-da97-4c3b-910e-37bb8c38ae49.jpg) no-repeat center center fixed;
@@ -46,24 +46,24 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Appointments
+                    <fmt:message key="appointments"/>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/client-past-records?language=${sessionScope.language}">Past appointments</a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/client-past-records?language=${sessionScope.language}"><fmt:message key="past.appointments"/></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/client-future-records?language=${sessionScope.language}">Future appointments</a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/client-future-records?language=${sessionScope.language}"><fmt:message key="future.appointments"/></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/make-appointment">To make appointment </a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/make-appointment"><fmt:message key="sign.up.appointment"/></a>
                 </div>
             </li>
 
             <li class="nav-item active">
                 <a href="${pageContext.request.contextPath}/salon/client/feedback?language=${sessionScope.language}"
-                   class="nav-link">To write feedback</a>
+                   class="nav-link"><fmt:message key="to.leave.feedback"/></a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item"><a class="nav-link" aria-disabled="true"> Hi, ${sessionScope.user.username}</a></li>
+            <li class="nav-item"><a class="nav-link" aria-disabled="true"><fmt:message key="hi.user"/>, ${sessionScope.user.username}</a></li>
 
             <li class="nav-item active">
                 <a class="nav-link">
@@ -82,7 +82,7 @@
                 </a>
             </li>
             <li class="nav-item active">
-                <a href="${pageContext.request.contextPath}/logout" class="nav-link">Logout</a>
+                <a href="${pageContext.request.contextPath}/logout" class="nav-link"><fmt:message key="logout"/></a>
             </li>
         </ul>
     </div>
@@ -99,19 +99,19 @@
                             <table>
                                 <tbody>
                                 <tr>
-                                    <td><i>Procedure:</i> </td>
+                                    <td><i><fmt:message key="procedure"/>:</i> </td>
                                     <td><strong>${pr.procedure.name}</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><i>Visit date:</i> </td>
+                                    <td><i><fmt:message key="visit.date"/>:</i> </td>
                                     <td><strong>${pr.recordDate}</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><i>Visit time:</i> </td>
+                                    <td><i><fmt:message key="time"/>:</i> </td>
                                     <td><strong>${pr.time}</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><i>Master:</i> </td>
+                                    <td><i><fmt:message key="user.role.master"/>:</i> </td>
                                     <td><strong>${pr.master.name} ${pr.master.surname}</strong></td>
                                 </tr>
                                 </tbody>

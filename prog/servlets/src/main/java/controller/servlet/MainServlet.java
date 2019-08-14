@@ -53,6 +53,7 @@ public class MainServlet extends HttpServlet {
         path = path.replaceAll("\\?*", "");
 
         Command command = commands.getOrDefault(path, commands.get("authorization"));
+
         String page;
         String role = (String) req.getSession().getAttribute("role");
 

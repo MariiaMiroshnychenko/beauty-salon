@@ -1,5 +1,6 @@
 package controller.command.impl.admin;
 
+import container.PagePath;
 import controller.command.Command;
 import model.entity.Record;
 import model.service.general.ScheduleService;
@@ -34,7 +35,7 @@ public class AdminPageRecord implements Command {
             request.setAttribute("records", scheduleForDateMap.values());
             request.setAttribute("masters", scheduleService.findMastersByDay(LocalDate.parse(date)));
         }
-        return "/WEB-INF/view/admin/adminPageMasters.jsp";
+        return PagePath.PAGE_ADMIN_SCHEDULE;
     }
 
     @Override

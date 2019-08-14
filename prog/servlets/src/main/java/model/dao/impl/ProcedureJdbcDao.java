@@ -36,12 +36,16 @@ public class ProcedureJdbcDao implements ProcedureDao {
         }
     }
 
-    @Override
-    public Procedure findProcedureById(Integer id) {
+    private Procedure findByAttributes (String query, Object... attributes) {
         Procedure procedure = null;
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `procedure_table` where id=?")) {
-            statement.setInt(1, id);
+        int counter = 1;
+
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            for (Object attribute : attributes) {
+                statement.setObject(counter, attribute);
+                counter++;
+            }
 
             ResultSet resultSet = statement.executeQuery();
 
@@ -56,6 +60,10 @@ public class ProcedureJdbcDao implements ProcedureDao {
             e.printStackTrace();
         }
         return procedure;
+    }
+    @Override
+    public Procedure findProcedureById(Integer id) {
+        return findByAttributes("select * from `procedure_table` where id=?", id);
     }
 
     @Override
@@ -82,24 +90,6 @@ public class ProcedureJdbcDao implements ProcedureDao {
 
     @Override
     public Procedure findProcedureByCodeAndLanguageId(Integer procedureCode, Integer languageId) {
-        Procedure procedure = null;
-
-        try (PreparedStatement statement = connection.prepareStatement("select * from `procedure_table` where code=? and language_id=?")) {
-            statement.setInt(1, procedureCode);
-            statement.setInt(2, languageId);
-
-            ResultSet resultSet = statement.executeQuery();
-
-            if (resultSet.next()) {
-                procedure = procedureMapper.extractFromResultSet(resultSet);
-            }
-            if (Objects.nonNull(procedure)) {
-                procedureMapper.makeUnique(procedureMap, procedure);
-            }
-            resultSet.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return procedure;
+        return findByAttributes("select * from `procedure_table` where code=? and language_id=?", procedureCode,languageId);
     }
 }

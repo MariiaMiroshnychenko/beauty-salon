@@ -1,4 +1,4 @@
-package com.beauty.salon.config.security;
+package com.beauty.salon.config.security.handler;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -42,6 +42,7 @@ public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHa
                     return "/client/notification";
             }
         }
+
 
         return "/";
     }

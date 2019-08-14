@@ -3,11 +3,14 @@ package model.dao.impl;
 import model.dao.FeedbackDao;
 import model.entity.Feedback;
 import model.mapper.impl.FeedbackMapper;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.*;
 
 public class FeedbackJdbcDao implements FeedbackDao {
+    final static Logger LOGGER = Logger.getLogger(FeedbackJdbcDao.class);
+
     private FeedbackMapper feedbackMapper = new FeedbackMapper();
     private Map<Integer, Feedback> reviewMap = new HashMap<>();
     private Connection connection;
@@ -30,6 +33,7 @@ public class FeedbackJdbcDao implements FeedbackDao {
             statement.execute();
 
         } catch (SQLException e) {
+            LOGGER.error("User can`t leave feedback");
             e.printStackTrace();
         }
     }
@@ -37,8 +41,10 @@ public class FeedbackJdbcDao implements FeedbackDao {
     @Override
     public void close() {
         try {
+            LOGGER.debug("Connection closed");
             connection.close();
         } catch (SQLException e) {
+            LOGGER.error("Can't close connection!");
             e.printStackTrace();
         }
     }

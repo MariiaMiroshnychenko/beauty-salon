@@ -1,5 +1,6 @@
 package controller.command.impl.client;
 
+import container.PagePath;
 import container.Query;
 import controller.command.Command;
 import model.entity.User;
@@ -24,7 +25,7 @@ public class ClientFutureRecordPage implements Command {
 
         request.setAttribute("futureRecords", clientService.futureOrPastRecords(user, language, Query.FUTURE_RECORDS));
 
-        return "/WEB-INF/view/client/client-future-records.jsp";
+        return PagePath.PAGE_CLIENT_FUTURE_RECORD;
     }
 
     @Override

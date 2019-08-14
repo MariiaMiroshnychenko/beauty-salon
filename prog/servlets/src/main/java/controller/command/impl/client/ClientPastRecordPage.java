@@ -1,5 +1,6 @@
 package controller.command.impl.client;
 
+import container.PagePath;
 import container.Query;
 import controller.command.Command;
 import model.entity.User;
@@ -21,7 +22,7 @@ public class ClientPastRecordPage implements Command {
 
         request.setAttribute("pastRecords", clientService.futureOrPastRecords(user, language, Query.PAST_RECORDS));
 
-        return "/WEB-INF/view/client/client-past-records.jsp";
+        return PagePath.PAGE_CLIENT_PAST_RECORD;
     }
 
     @Override

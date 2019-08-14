@@ -1,5 +1,6 @@
 package controller.command.impl.master;
 
+import container.PagePath;
 import controller.command.Command;
 import model.entity.Record;
 import model.entity.User;
@@ -27,7 +28,7 @@ public class MasterPageSchedule implements Command {
         request.setAttribute("times", recordMap.keySet());
         request.setAttribute("masterRecords", recordMap.values());
 
-        return "/WEB-INF/view/master/masterSchedule.jsp";
+        return PagePath.PAGE_MASTER_SCHEDULE;
     }
 
     @Override

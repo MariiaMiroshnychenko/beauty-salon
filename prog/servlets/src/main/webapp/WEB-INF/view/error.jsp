@@ -7,12 +7,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>Error</title>
 </head>
 <body background="https://cdn.pixabay.com/photo/2018/01/16/10/36/mistake-3085712_1280.jpg">
-<fmt:message key="lets.authorization"/>
-<a href="/login"><fmt:message key="authorization"/> </a>
+Oooops, what's wrong! Let's authorization!
+<a href="/login"> sing in</a>
 </body>
 </html>

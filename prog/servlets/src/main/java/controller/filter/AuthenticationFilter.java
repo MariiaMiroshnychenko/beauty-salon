@@ -1,12 +1,14 @@
 package controller.filter;
 
 import container.ConstantWorkHour;
+import container.PagePath;
 import controller.command.Command;
 import controller.command.impl.admin.AdminMenu;
 import controller.command.impl.client.ClientFutureRecordPage;
 import controller.command.impl.master.MasterPage;
 import model.dao.UserDao;
 import model.entity.User;
+import org.apache.log4j.Logger;
 import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.*;
@@ -20,6 +22,8 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class AuthenticationFilter implements Filter {
+    final static Logger LOGGER = Logger.getLogger(AuthenticationFilter.class);
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
     }
@@ -57,12 +61,15 @@ public class AuthenticationFilter implements Filter {
                         .compareTo(LocalTime.of(ConstantWorkHour.END_HOUR, ConstantWorkHour.MINUTE)) >= 0 ? LocalDate.now().plusDays(1) : LocalDate.now();
                 request.getSession().setAttribute("availableDate", availableDate);
 
+                LOGGER.debug("User logged in and redirected to menu page");
                 redirectToAccount(request, response, user.getRole());
             } else {
-                request.getRequestDispatcher("/WEB-INF/view/authorization.jsp").forward(request, response);
+                LOGGER.error("Invalid user password");
+                LOGGER.debug("User redirected to login page");
+                request.getRequestDispatcher(PagePath.PAGE_AUTHORIZATION).forward(request, response);
             }
         } else {
-            request.getRequestDispatcher("/WEB-INF/view/authorization.jsp").forward(request, response);
+            request.getRequestDispatcher(PagePath.PAGE_AUTHORIZATION).forward(request, response);
         }
     }
 

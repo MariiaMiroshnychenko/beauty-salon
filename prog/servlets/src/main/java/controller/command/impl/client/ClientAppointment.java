@@ -1,5 +1,6 @@
 package controller.command.impl.client;
 
+import container.PagePath;
 import controller.command.Command;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +11,7 @@ public class ClientAppointment implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
-        return "/WEB-INF/view/client/make-appointment.jsp";
+        return PagePath.PAGE_CLIENT_MAKE_APPOINTMENT;
     }
 
     @Override

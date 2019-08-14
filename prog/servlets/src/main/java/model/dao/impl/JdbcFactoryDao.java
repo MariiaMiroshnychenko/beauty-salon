@@ -1,12 +1,15 @@
 package model.dao.impl;
 
 import model.dao.*;
+import org.apache.log4j.Logger;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
 public class JdbcFactoryDao extends FactoryDao {
+    final static Logger LOGGER = Logger.getLogger(JdbcFactoryDao.class);
+
     private DataSource dataSource = ConnectionPool.getDataSource();
 
     @Override
@@ -43,6 +46,7 @@ public class JdbcFactoryDao extends FactoryDao {
         try {
             return dataSource.getConnection();
         } catch (SQLException e) {
+            LOGGER.error("Can't connect to database");
             throw new RuntimeException(e);
         }
     }

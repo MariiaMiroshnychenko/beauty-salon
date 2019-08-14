@@ -1,5 +1,6 @@
 package controller.command.impl.client;
 
+import container.PagePath;
 import controller.command.Command;
 import model.entity.User;
 import model.service.user.ClientService;
@@ -20,7 +21,7 @@ public class ClientPageFeedback implements Command {
 
         request.setAttribute("recordsWithoutFeedback", clientService.uncheckedRecords(user, language));
 
-        return "/WEB-INF/view/client/feedback.jsp";
+        return PagePath.PAGE_CLIENT_FEEDBACK;
     }
 
     @Override

@@ -24,7 +24,7 @@
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Client</title>
+    <title><fmt:message key="user.role.client"/></title>
     <style>
         body {
             background: url(http://localhost:8080/images/kisspng-ballet-dancer-watercolor-painting-vector-swan-lake-5a81d48def5362.6526784115184579979803.png) no-repeat center center fixed;
@@ -48,30 +48,27 @@
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    Appointments
+                    <fmt:message key="appointments"/>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"
-                       href="${pageContext.request.contextPath}/salon/client/client-past-records?language=${sessionScope.language}">Past
-                        appointments</a>
+                       href="${pageContext.request.contextPath}/salon/client/client-past-records?language=${sessionScope.language}"><fmt:message key="past.appointments"/></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item"
-                       href="${pageContext.request.contextPath}/salon/client/client-future-records?language=${sessionScope.language}">Future
-                        appointments</a>
+                       href="${pageContext.request.contextPath}/salon/client/client-future-records?language=${sessionScope.language}"><fmt:message key="future.appointments"/></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/make-appointment">To
-                        make appointment </a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/make-appointment"><fmt:message key="sign.up.appointment"/></a>
                 </div>
             </li>
 
             <li class="nav-item active">
                 <a href="${pageContext.request.contextPath}/salon/client/feedback?language=${sessionScope.language}"
-                   class="nav-link">To write feedback</a>
+                   class="nav-link"><fmt:message key="to.leave.feedback"/></a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">
-                <a class="nav-link" aria-disabled="true">Hi, ${sessionScope.user.username}</a></li>
+                <a class="nav-link" aria-disabled="true"><fmt:message key="hi.user"/>, ${sessionScope.user.username}</a></li>
 
             <li class="nav-item">
                 <a class="nav-link">
@@ -94,7 +91,7 @@
             </li>
 
             <li class="nav-item active">
-                <a href="${pageContext.request.contextPath}/logout" class="nav-link">Logout</a>
+                <a href="${pageContext.request.contextPath}/logout" class="nav-link"><fmt:message key="logout"/></a>
             </li>
         </ul>
     </div>
@@ -108,23 +105,23 @@
                 <table>
                     <thead>
                     <tr>
-                        <td align="center" style="padding: 20px">Your choice</td>
+                        <td align="center" style="padding: 20px"><fmt:message key="your.choice"/></td>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td align="center">Master:</td>
+                        <td align="center"><fmt:message key="user.role.master"/>:</td>
                         <td align="right" style="width: 230px; padding: 10px">
                             <input type="hidden" name="masterId" id="masterId" value="${param.masterId}">
                             <p>${param.masterFullName} </p></td>
                     </tr>
                     <tr>
-                        <td align="center">Date:</td>
+                        <td align="center"><fmt:message key="visit.date"/>:</td>
                         <input type="hidden" name="date" id="date" value="${param.date}">
                         <td align="right" style="width: 230px; padding: 10px"><p> ${param.date} </p></td>
                     </tr>
                     <tr>
-                        <td align="center">Time:</td>
+                        <td align="center"><fmt:message key="time"/>:</td>
                         <td align="right" style="padding: 10px">
                             <select id="time" name="time" class="form-control" style="font-size: 11pt; width: 230px;align-items: center">
                                 <c:forEach var="t" items="${sessionScope.availableTimes}">
@@ -134,7 +131,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="center">Procedure:</td>
+                        <td align="center"><fmt:message key="procedure"/>:</td>
                         <td align="right" style="padding: 10px">
                             <select id="procedure" class="form-control" name="procedure" style="font-size: 11pt; width: 230px">
                                 <c:forEach var="p" items="${sessionScope.procedures}">

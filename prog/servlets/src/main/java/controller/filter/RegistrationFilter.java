@@ -5,6 +5,7 @@ import controller.command.impl.Registration;
 import model.entity.User;
 import model.service.general.UserService;
 import model.service.general.impl.UserServiceImpl;
+import org.apache.log4j.Logger;
 import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.*;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class RegistrationFilter implements Filter {
+    final static Logger LOGGER = Logger.getLogger(RegistrationFilter.class);
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
     }
@@ -36,11 +39,15 @@ public class RegistrationFilter implements Filter {
         User user = userService.findUserByUsername(username);
 
         if (user != null) {
+            LOGGER.error("User exists!");
+
             request.setAttribute("usernameError", "Try to enter new username!");
         } else {
             user = new User(name, surname, email, "client", username, encodingPassword);
 
             userService.create(user);
+
+            LOGGER.info("New user registered");
             request.getRequestDispatcher(new Authorization().execute(request)).forward(request, response);
         }
         request.getRequestDispatcher(new Registration().execute(request)).forward(request, response);

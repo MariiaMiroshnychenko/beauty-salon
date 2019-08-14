@@ -1,5 +1,6 @@
 package controller.command.impl.admin;
 
+import container.PagePath;
 import controller.command.Command;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +11,7 @@ public class AdminMenu implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
-        return "/WEB-INF/view/admin/admin-menu.jsp";
+        return PagePath.PAGE_ADMIN_MENU;
     }
 
     @Override

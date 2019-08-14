@@ -1,5 +1,6 @@
 package controller.command.impl.admin;
 
+import container.PagePath;
 import controller.command.Command;
 import model.service.general.UserService;
 import model.service.general.impl.UserServiceImpl;
@@ -26,7 +27,7 @@ public class AdminPageMasterSelection implements Command {
         request.setAttribute("reviewsForMaster", adminService.feedbackForMaster(masterId, language));
         request.getSession().setAttribute("masters", userService.findUsersByRole("master"));
 
-        return "/WEB-INF/view/admin/admin-feedback.jsp";
+        return PagePath.PAGE_ADMIN_FEEDBACK;
     }
 
     @Override

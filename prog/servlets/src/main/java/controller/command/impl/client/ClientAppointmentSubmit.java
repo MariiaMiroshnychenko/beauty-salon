@@ -1,5 +1,6 @@
 package controller.command.impl.client;
 
+import container.PagePath;
 import controller.command.Command;
 import model.entity.Record;
 import model.entity.User;
@@ -25,7 +26,7 @@ public class ClientAppointmentSubmit implements Command {
                 LocalTime.parse(request.getParameter("time")),
                 client.getId()));
 
-        return "/WEB-INF/view/client/client-past-records.jsp";
+        return PagePath.PAGE_CLIENT_PAST_RECORD;
     }
 
     @Override

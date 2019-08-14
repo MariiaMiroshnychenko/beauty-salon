@@ -1,6 +1,7 @@
 package controller.command.impl.client;
 
 import container.ConstantWorkHour;
+import container.PagePath;
 import controller.command.Command;
 import model.entity.Language;
 import model.entity.Procedure;
@@ -40,7 +41,7 @@ public class ClientAppointmentConfirm implements Command {
 
             request.getSession().setAttribute("procedures", procedures);
         }
-        return "/WEB-INF/view/client/make-appointment-confirm.jsp";
+        return PagePath.PAGE_CLIENT_APPOINTMENT_CONFIRM;
     }
 
     @Override

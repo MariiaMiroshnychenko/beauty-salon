@@ -1,5 +1,6 @@
 package controller.command.impl;
 
+import container.PagePath;
 import controller.command.Command;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,7 +10,7 @@ public class Logout implements Command {
     private String[] hasAuthority = {"admin", "client", "master"};
     @Override
     public String execute(HttpServletRequest request) {
-        return "/WEB-INF/view/authorization.jsp";
+        return PagePath.PAGE_AUTHORIZATION;
     }
 
     @Override

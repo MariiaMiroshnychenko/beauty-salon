@@ -1,20 +1,18 @@
 package container;
 
 public interface PagePath {
-    String PAGE_ADMIN_MENU = "page/admin/admin-menu";
-    String PAGE_ADMIN_FEEDBACK = "page/admin/admin-feedback";
-    String PAGE_ADMIN_SCHEDULE = "page/admin/adminPageSchedule";
+    String PAGE_ADMIN_MENU = "/WEB-INF/view/admin/admin-menu.jsp";
+    String PAGE_ADMIN_FEEDBACK = "/WEB-INF/view/admin/admin-feedback.jsp";
+    String PAGE_ADMIN_SCHEDULE = "/WEB-INF/view/admin/adminPageMasters.jsp";
 
-    String PAGE_CLIENT_APPOINTMENT_CONFIRM = "page/client/make-appointment-confirm";
-    String PAGE_CLIENT_MAKE_APPOINTMENT = "/page/client/make-appointment";
-    String PAGE_CLIENT_NOTIFICATION = "page/client/client-notification";
-    String PAGE_CLIENT_REVIEW = "page/client/client-review";
+    String PAGE_CLIENT_APPOINTMENT_CONFIRM = "/WEB-INF/view/client/make-appointment-confirm.jsp";
+    String PAGE_CLIENT_MAKE_APPOINTMENT = "/WEB-INF/view/client/make-appointment.jsp";
+    String PAGE_CLIENT_PAST_RECORD = "/WEB-INF/view/client/client-past-records.jsp";
+    String PAGE_CLIENT_FUTURE_RECORD = "/WEB-INF/view/client/client-future-records.jsp";
+    String PAGE_CLIENT_FEEDBACK = "/WEB-INF/view/client/feedback.jsp";
 
-    String PAGE_MASTER_SCHEDULE = "page/master/masterSchedule";
+    String PAGE_MASTER_SCHEDULE = "/WEB-INF/view/master/masterSchedule.jsp";
 
-    String PAGE_AUTHORIZATION = "page/authorization";
-    String PAGE_REGISTRATION = "page/registration";
-
-    String REDIRECT_TO_CLIENT_NOTIFICATION_PAGE = "redirect:/client/notification";
-    String REDIRECT_TO_LOGIN_PAGE = "redirect:/login";
+    String PAGE_AUTHORIZATION = "/WEB-INF/view/authorization.jsp";
+    String PAGE_REGISTRATION = "/WEB-INF/view/registration.jsp";
 }

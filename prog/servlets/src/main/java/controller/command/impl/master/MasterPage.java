@@ -1,5 +1,6 @@
 package controller.command.impl.master;
 
+import container.PagePath;
 import controller.command.Command;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,7 +10,7 @@ public class MasterPage implements Command {
     private String[] hasAuthority = {"master"};
     @Override
     public String execute(HttpServletRequest request) {
-        return "/WEB-INF/view/master/masterSchedule.jsp";
+        return PagePath.PAGE_MASTER_SCHEDULE;
     }
 
     @Override

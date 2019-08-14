@@ -45,12 +45,11 @@ public class UserJdbcDao implements UserDao {
         }
     }
 
-    @Override
-    public User findUserByUsername(String username) {
+    private User findByAttribute(String query, Object attribute) {
         User user = null;
 
-        try (PreparedStatement statement = connection.prepareStatement("select * from `user_table` where username=?")) {
-            statement.setString(1, username);
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setObject(1, attribute);
 
             ResultSet resultSet = statement.executeQuery();
 
@@ -68,25 +67,13 @@ public class UserJdbcDao implements UserDao {
     }
 
     @Override
+    public User findUserByUsername(String username) {
+        return findByAttribute("select * from `user_table` where username=?", username);
+    }
+
+    @Override
     public User findUserById(Integer userId) {
-        User user = null;
-
-        try (PreparedStatement statement = connection.prepareStatement("select * from `user_table` where id=?")) {
-            statement.setInt(1, userId);
-
-            ResultSet resultSet = statement.executeQuery();
-
-            if (resultSet.next()) {
-                user = userMapper.extractFromResultSet(resultSet);
-            }
-            if (Objects.nonNull(user)) {
-                userMapper.makeUnique(userMap, user);
-            }
-            resultSet.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return user;
+        return findByAttribute("select * from `user_table` where id=?", userId);
     }
 
     @Override

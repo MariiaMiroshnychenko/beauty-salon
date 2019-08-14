@@ -12,7 +12,7 @@
 <html lang="${language}">
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
+    <title><fmt:message key="registration"/></title>
     <link rel="icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://localhost:8080/css/style.css" media="screen" type="text/css"/>
@@ -34,24 +34,24 @@
     </form>
 </div>
 <div id="login-form" style="width: 21%">
-    <h1 style="width: auto">Registration</h1>
+    <h1 style="width: auto"><fmt:message key="registration"/></h1>
     <fieldset style="width: auto">
-        <label style="font-size: 9pt; text-align: left">Put in your name and surname in English, please.</label><br/>
+        <label style="font-size: 9pt; text-align: left"><fmt:message key="enter.name.english"/></label><br/>
         <form method="post" action="${pageContext.request.contextPath}/register">
             <table>
                 <tbody>
                 <tr>
-                    <td>Name: </td>
+                    <td><fmt:message key="name"/>: </td>
                     <td><input type="text" class="form-control" name="name"
                                style="width: 250px" required pattern="[A-Z][a-z]+"></td>
                 </tr>
                 <tr>
-                    <td>Surname: </td>
+                    <td><fmt:message key="surname"/>: </td>
                     <td><input type="text" class="form-control" name="surname"
                                style="width: 250px" required pattern="[A-Z][a-z]+"></td>
                 </tr>
                 <tr>
-                    <td>Email: </td>
+                    <td><fmt:message key="email"/>: </td>
                     <td><input type="email" class="form-control" name="email" style="width: 250px" required></td>
                 </tr>
                 </tbody>
@@ -60,17 +60,17 @@
             <table>
                 <tbody>
                 <tr>
-                    <td>Username: </td>
+                    <td><fmt:message key="username"/>: </td>
                     <td><input type="text" class="form-control" name="username_reg"
                                style="width: 250px" required pattern="[A-Za-z0-9_]{8,20}" maxlength="20"></td>
                 </tr>
                 <tr>
-                    <td>Password: </td>
+                    <td><fmt:message key="password"/>: </td>
                     <td><input type="password" class="form-control" name="password" id="password1"
                                style="width: 250px"required pattern="[A-Za-z0-9_]{8,20}" maxlength="20"></td>
                 </tr>
                 <tr>
-                    <td>Repeat password: </td>
+                    <td><fmt:message key="repeat.password"/> </td>
                     <td><input type="password" class="form-control" name="repeatedPassword" id="password2"
                                style="width: 250px" required pattern="[A-Za-z0-9_]{8,20}"></td>
                 </tr>

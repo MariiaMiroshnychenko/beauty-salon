@@ -12,7 +12,7 @@
 <html lang="${language}">
 <head>
     <meta charset="UTF-8">
-    <title>Authorization</title>
+    <title><fmt:message key="authorization"/></title>
     <link rel="icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://localhost:8080/css/style.css" media="screen" type="text/css"/>
@@ -34,14 +34,14 @@
     </form>
 </div>
 <div id="login-form">
-    <h1>АВТОРИЗАЦИЯ</h1>
+    <h1><fmt:message key="authorization"/></h1>
     <fieldset>
         <form method="post" action="${pageContext.request.contextPath}/salon">
             <input type="text" name="username" placeholder="username" required>
             <input type="password" name="password" placeholder="password" required>
             <input type="submit" value="ВОЙТИ">
         </form>
-        Don't you have an account? <a href="${pageContext.request.contextPath}/registration" data-toggle="modal" data-target="#myModal">Sign up</a>
+        <fmt:message key="no.account"/> <a href="${pageContext.request.contextPath}/registration" data-toggle="modal" data-target="#myModal"><fmt:message key="sign.up"/></a>
     </fieldset>
 </div>
 </body>

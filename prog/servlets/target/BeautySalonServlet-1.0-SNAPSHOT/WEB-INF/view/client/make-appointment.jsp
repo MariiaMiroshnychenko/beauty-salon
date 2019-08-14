@@ -23,7 +23,7 @@
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Client</title>
+    <title><fmt:message key="user.role.client"/></title>
     <style>
         body {
             background: url(http://localhost:8080/images/kisspng-ballet-dancer-watercolor-painting-vector-swan-lake-5a81d48def5362.6526784115184579979803.png) no-repeat center center fixed;
@@ -47,26 +47,26 @@
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    Appointments
+                    <fmt:message key="appointments"/>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"
-                       href="${pageContext.request.contextPath}/salon/client/client-past-records?language=${sessionScope.language}">Past appointments</a>
+                       href="${pageContext.request.contextPath}/salon/client/client-past-records?language=${sessionScope.language}"><fmt:message key="past.appointments"/></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item"
-                       href="${pageContext.request.contextPath}/salon/client/client-future-records?language=${sessionScope.language}">Future appointments</a>
+                       href="${pageContext.request.contextPath}/salon/client/client-future-records?language=${sessionScope.language}"><fmt:message key="future.appointments"/></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/make-appointment">To make appointment </a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/salon/client/make-appointment"><fmt:message key="sign.up.appointment"/></a>
                 </div>
 
             <li class="nav-item active">
                 <a href="${pageContext.request.contextPath}/salon/client/feedback?language=${sessionScope.language}"
-                   class="nav-link">To write feedback</a>
+                   class="nav-link"><fmt:message key="to.leave.feedback"/></a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">
-                <a class="nav-link" aria-disabled="true">Hi, ${sessionScope.user.username}</a></li>
+                <a class="nav-link" aria-disabled="true"><fmt:message key="hi.user"/>, ${sessionScope.user.username}</a></li>
 
             <li class="nav-item">
                 <a class="nav-link">
@@ -87,13 +87,13 @@
             </li>
 
             <li class="nav-item active">
-                <a href="${pageContext.request.contextPath}/logout" class="nav-link">Logout</a>
+                <a href="${pageContext.request.contextPath}/logout" class="nav-link"><fmt:message key="logout"/></a>
             </li>
         </ul>
     </div>
 </nav>
 
-<h3 style="padding: 30px 17%">Available masters for selected recordDate. Also you can choose another date.</h3>
+<h3 style="padding: 30px 17%"><fmt:message key="master.for.date"/></h3>
 
 <div class="container-fluid">
     <div class="row" style="padding: 4% 37%">
@@ -120,8 +120,8 @@
                                 <table>
                                     <thead>
                                     <tr>
-                                        <td align="center">Master</td>
-                                        <td align="center">To sign up</td>
+                                        <td align="center"><fmt:message key="user.role.master"/></td>
+                                        <td align="center"><fmt:message key="sign.up.appointment"/></td>
                                     </tr>
                                     </thead>
                                     <tbody>

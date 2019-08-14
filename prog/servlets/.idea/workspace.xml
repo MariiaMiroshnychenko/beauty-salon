@@ -7,61 +7,127 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13796d41-fbb8-46b7-9b2d-997369343847" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/message_en.properties" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/config/security/handler/MyAccessDeniedHandler.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../spring/salon/src/test/java/com/beauty/salon/model/service/EmailServiceTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/container/PagePath.java" afterPath="$PROJECT_DIR$/src/main/java/container/PagePath.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/Authorization.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/Authorization.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/Logout.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/Logout.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/Registration.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/Registration.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminMenu.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminMenu.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageFeedback.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageFeedback.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageMasterSelection.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageMasterSelection.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageRecord.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageRecord.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointment.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointment.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentConfirm.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentConfirm.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentDate.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentDate.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentSubmit.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentSubmit.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientFutureRecordPage.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientFutureRecordPage.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPageFeedback.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPageFeedback.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPastRecordPage.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPastRecordPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/PageReviewSubmit.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/client/PageReviewSubmit.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPage.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPageSchedule.java" afterPath="$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPageSchedule.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/filter/AuthenticationFilter.java" afterPath="$PROJECT_DIR$/src/main/java/controller/filter/AuthenticationFilter.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/filter/NoCacheFilter.java" afterPath="$PROJECT_DIR$/src/main/java/controller/filter/NoCacheFilter.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/filter/RegistrationFilter.java" afterPath="$PROJECT_DIR$/src/main/java/controller/filter/RegistrationFilter.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/servlet/MainServlet.java" afterPath="$PROJECT_DIR$/src/main/java/controller/servlet/MainServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/FeedbackService.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/FeedbackService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/LanguageService.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/LanguageService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/ProcedureService.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/ProcedureService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/RecordService.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/RecordService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/ScheduleService.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/ScheduleService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/FeedbackServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/impl/FeedbackServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/LanguageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/impl/LanguageServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/ProcedureServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/impl/ProcedureServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/RecordServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/impl/RecordServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/ScheduleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/impl/ScheduleServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/general/impl/UserServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/FeedbackJdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/FeedbackJdbcDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/JdbcFactoryDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/JdbcFactoryDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/ProcedureJdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/ProcedureJdbcDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/impl/UserJdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/impl/UserJdbcDao.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/service/user/impl/AdminServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/user/impl/AdminServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/user/impl/ClientServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/user/impl/ClientServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/user/impl/MasterServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/service/user/impl/MasterServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/message.properties" afterPath="$PROJECT_DIR$/src/main/resources/message.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/message_uk.properties" afterPath="$PROJECT_DIR$/src/main/resources/message_uk.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/admin-feedback.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/admin-feedback.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/admin-menu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/admin-menu.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/adminPageMasters.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/adminPageMasters.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/authorization.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/authorization.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/client-future-records.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/client-future-records.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/client-past-records.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/client-past-records.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/feedback.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/feedback.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/make-appointment-confirm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/make-appointment-confirm.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/make-appointment.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/make-appointment.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/error.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/error.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/master/masterSchedule.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/master/masterSchedule.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/FeedbackServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/service/FeedbackServiceTest.java" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/Authorization.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/Authorization.class" />
       <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/Logout.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/Logout.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/Registration.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/Registration.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/admin/AdminMenu.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/admin/AdminMenu.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/admin/AdminPageFeedback.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/admin/AdminPageFeedback.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/admin/AdminPageMasterSelection.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/admin/AdminPageMasterSelection.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/admin/AdminPageRecord.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/admin/AdminPageRecord.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientAppointment.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientAppointment.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientAppointmentConfirm.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientAppointmentConfirm.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientAppointmentDate.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientAppointmentDate.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientAppointmentSubmit.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientAppointmentSubmit.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientFutureRecordPage.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientFutureRecordPage.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientPastRecordPage.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/ClientPastRecordPage.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/PageReviewSubmit.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/client/PageReviewSubmit.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/master/MasterPage.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/master/MasterPage.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/master/MasterPageSchedule.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/command/impl/master/MasterPageSchedule.class" />
       <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/filter/AuthenticationFilter.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/filter/AuthenticationFilter.class" />
-      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/RecordService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/ScheduleService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/impl/RecordServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/impl/ScheduleServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/filter/NoCacheFilter.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/filter/NoCacheFilter.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/filter/RegistrationFilter.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/filter/RegistrationFilter.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/servlet/MainServlet.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/controller/servlet/MainServlet.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/message.properties" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/message.properties" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/message_uk.properties" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/message_uk.properties" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/dao/impl/FeedbackJdbcDao.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/dao/impl/FeedbackJdbcDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/dao/impl/JdbcFactoryDao.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/dao/impl/JdbcFactoryDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/dao/impl/ProcedureJdbcDao.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/dao/impl/ProcedureJdbcDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/dao/impl/UserJdbcDao.class" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/dao/impl/UserJdbcDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/FeedbackService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/LanguageService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/ProcedureService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/UserService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/impl/FeedbackServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/impl/LanguageServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/impl/ProcedureServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/classes/model/service/impl/UserServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/admin/admin-feedback.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/admin/admin-feedback.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/admin/admin-menu.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/admin/admin-menu.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/admin/adminPageMasters.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/admin/adminPageMasters.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/authorization.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/authorization.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/client/client-future-records.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/client/client-future-records.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/client/client-past-records.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/client/client-past-records.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/client/make-appointment-confirm.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/client/make-appointment-confirm.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/client/make-appointment.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/client/make-appointment.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/error.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/error.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/master/masterSchedule.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/master/masterSchedule.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/registration.jsp" afterPath="$PROJECT_DIR$/target/BeautySalonServlet-1.0-SNAPSHOT/WEB-INF/view/registration.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/classes/container/PagePath.class" afterPath="$PROJECT_DIR$/target/classes/container/PagePath.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/Authorization.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/Authorization.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/Logout.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/Logout.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/Registration.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/Registration.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminMenu.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminMenu.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminPageFeedback.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminPageFeedback.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminPageMasterSelection.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminPageMasterSelection.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminPageRecord.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/admin/AdminPageRecord.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientAppointment.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientAppointment.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientAppointmentConfirm.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientAppointmentConfirm.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientAppointmentDate.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientAppointmentDate.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientAppointmentSubmit.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientAppointmentSubmit.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientFutureRecordPage.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientFutureRecordPage.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientPastRecordPage.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/client/ClientPastRecordPage.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/client/PageReviewSubmit.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/client/PageReviewSubmit.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/master/MasterPage.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/master/MasterPage.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/command/impl/master/MasterPageSchedule.class" afterPath="$PROJECT_DIR$/target/classes/controller/command/impl/master/MasterPageSchedule.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/filter/AuthenticationFilter.class" afterPath="$PROJECT_DIR$/target/classes/controller/filter/AuthenticationFilter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/filter/NoCacheFilter.class" afterPath="$PROJECT_DIR$/target/classes/controller/filter/NoCacheFilter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/filter/RegistrationFilter.class" afterPath="$PROJECT_DIR$/target/classes/controller/filter/RegistrationFilter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/servlet/MainServlet.class" afterPath="$PROJECT_DIR$/target/classes/controller/servlet/MainServlet.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/message.properties" afterPath="$PROJECT_DIR$/target/classes/message.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/message_uk.properties" afterPath="$PROJECT_DIR$/target/classes/message_uk.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/dao/impl/FeedbackJdbcDao.class" afterPath="$PROJECT_DIR$/target/classes/model/dao/impl/FeedbackJdbcDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/dao/impl/JdbcFactoryDao.class" afterPath="$PROJECT_DIR$/target/classes/model/dao/impl/JdbcFactoryDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/dao/impl/ProcedureJdbcDao.class" afterPath="$PROJECT_DIR$/target/classes/model/dao/impl/ProcedureJdbcDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/dao/impl/UserJdbcDao.class" afterPath="$PROJECT_DIR$/target/classes/model/dao/impl/UserJdbcDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/FeedbackService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/LanguageService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/ProcedureService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/RecordService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/ScheduleService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/UserService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/impl/FeedbackServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/impl/LanguageServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/impl/ProcedureServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/impl/RecordServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/impl/ScheduleServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/impl/UserServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/user/impl/AdminServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/model/service/user/impl/AdminServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/service/user/impl/ClientServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/model/service/user/impl/ClientServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/FeedbackServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/service/FeedbackServiceTest.class" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/pom.xml" afterPath="$PROJECT_DIR$/../spring/salon/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/config/security/UserAuthenticationSuccessHandler.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/config/security/handler/UserAuthenticationSuccessHandler.java" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/config/security/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/../spring/salon/src/main/java/com/beauty/salon/config/security/WebSecurityConfig.java" />
+      <change beforePath="$PROJECT_DIR$/../spring/salon/src/test/java/com/beauty/salon/model/repository/ProcedureRepositoryTest.java" afterPath="$PROJECT_DIR$/../spring/salon/src/test/java/com/beauty/salon/model/repository/ProcedureRepositoryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,51 +157,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="feedback.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/feedback.jsp">
+      <file leaf-file-name="RecordJdbcDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/RecordJdbcDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
-              <caret line="108" column="55" lean-forward="false" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
-              <folding />
+            <state relative-caret-position="2625">
+              <caret line="115" column="30" lean-forward="false" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
+              <folding>
+                <marker date="1565718172432" expanded="true" signature="668:773" ph="INSERT INTO record_table... " />
+                <marker date="1565718172432" expanded="true" signature="3425:3462" ph="SELECT * FRO... record_table" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="make-appointment.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/make-appointment.jsp">
+      <file leaf-file-name="AdminServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/impl/AdminServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="25" column="45" lean-forward="false" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="make-appointment-confirm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/make-appointment-confirm.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="masterSchedule.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/master/masterSchedule.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-225">
-              <caret line="90" column="112" lean-forward="false" selection-start-line="90" selection-start-column="112" selection-end-line="90" selection-end-column="112" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authorization.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/authorization.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="43" column="166" lean-forward="false" selection-start-line="43" selection-start-column="166" selection-end-line="43" selection-end-column="166" />
+            <state relative-caret-position="875">
+              <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -144,49 +183,82 @@
       <file leaf-file-name="error.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/error.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="89" lean-forward="false" selection-start-line="13" selection-start-column="89" selection-end-line="13" selection-end-column="89" />
+            <state relative-caret-position="375">
+              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-feedback.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/admin-feedback.jsp">
+      <file leaf-file-name="Logout.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/Logout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2575">
-              <caret line="103" column="20" lean-forward="true" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+            <state relative-caret-position="175">
+              <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-menu.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/admin-menu.jsp">
+      <file leaf-file-name="application.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log/application.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="85" column="86" lean-forward="false" selection-start-line="85" selection-start-column="86" selection-end-line="85" selection-end-column="86" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/servlet/MainServlet.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-50">
-              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="25">
+              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp">
+      <file leaf-file-name="ClientServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/impl/ClientServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="72" column="61" lean-forward="false" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="61" />
+            <state relative-caret-position="100">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MasterServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/impl/MasterServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/AdminService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserJdbcDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/UserJdbcDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2075">
+              <caret line="93" column="43" lean-forward="false" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
+              <folding>
+                <marker date="1565763539569" expanded="true" signature="665:764" ph="insert into `user_table`... " />
+                <marker date="1565763539569" expanded="true" signature="2531:2570" ph="select * fro... user_table" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -220,36 +292,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/container/PagePath.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/RecordDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageMasterSelection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/ScheduleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/impl/ScheduleJdbcDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/service/user/ClientService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/PageReview.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/service/impl/ScheduleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/service/ScheduleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/impl/RecordJdbcDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/service/user/impl/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/service/user/impl/ClientServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/container/Query.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientFutureRecordPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/service/user/MasterService.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/service/user/impl/MasterServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPageSchedule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/filter/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/Logout.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/servlet/MainServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/filter/NoCacheFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/filter/RegistrationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/Authorization.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPastRecordPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPageFeedback.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentDate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentConfirm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageFeedback.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/service/RecordService.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/service/impl/RecordServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/service/general/FeedbackService.java" />
@@ -269,8 +314,35 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/master/masterSchedule.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/authorization.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/admin-feedback.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/error.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageFeedback.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageMasterSelection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentConfirm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientFutureRecordPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPageFeedback.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentSubmit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPastRecordPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/Authorization.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/Logout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/Registration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/container/PagePath.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPageSchedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/filter/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/filter/NoCacheFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/filter/RegistrationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/servlet/MainServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/impl/FeedbackJdbcDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/impl/JdbcFactoryDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/impl/UserJdbcDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/impl/ProcedureJdbcDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/service/user/impl/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -372,10 +444,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -399,110 +468,20 @@
               <item name="servlets" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
               <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeautySalonServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -513,18 +492,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring/salon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view\client" />
-      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view\admin" />
-      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view" />
-      <recent name="D:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp" />
-      <recent name="D:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="model.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\CORE-SPRING\beauty-salon\prog\servlets\src\main\resources" />
@@ -540,8 +515,12 @@
       <recent name="controller.command.admin" />
       <recent name="exception" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="model.mapper" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\CORE-SPRING\beauty-salon\prog\servlets\target" />
+      <recent name="F:\CORE-SPRING\beauty-salon\prog\servlets\src\main\webapp" />
+      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view\client" />
+      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view\admin" />
+      <recent name="F:\CORE-SPRING\FINAL_PROJECT\prog\servlets\src\main\webapp\WEB-INF\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -909,7 +888,9 @@
       <workItem from="1565510426046" duration="9565000" />
       <workItem from="1565595610579" duration="1804000" />
       <workItem from="1565701560319" duration="11143000" />
-      <workItem from="1565718781427" duration="8670000" />
+      <workItem from="1565718781427" duration="10423000" />
+      <workItem from="1565759763967" duration="6632000" />
+      <workItem from="1565766436765" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="Client, Master and Admin services added">
       <created>1565722895257</created>
@@ -918,7 +899,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565722895257</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="JSP localization added">
+      <created>1565731116738</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565731116738</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -954,42 +942,42 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="406544000" />
+    <option name="totallyTimeSpent" value="414936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5042965" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17327294" sideWeight="0.11009667" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08807734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.49785176" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.4849624" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5042965" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17327294" sideWeight="0.11009667" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.527927" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879817" sideWeight="0.527927" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24328679" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2508056" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.47207305" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08807734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.49785176" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.4849624" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.47207305" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1034,21 +1022,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Code refactoring" />
     <MESSAGE value="Client, Master and Admin services added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Client, Master and Admin services added" />
+    <MESSAGE value="JSP localization added" />
+    <option name="LAST_COMMIT_MESSAGE" value="JSP localization added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointment.java</url>
-          <line>11</line>
+          <line>12</line>
           <properties class="controller.command.impl.client.ClientAppointment" method="execute">
             <option name="EMULATED" value="true" />
           </properties>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/model/dao/impl/UserJdbcDao.java</url>
-          <line>101</line>
+          <line>88</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -1062,308 +1051,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/Registration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/Logout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-          <folding>
-            <element signature="e#374#375#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/Authorization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPageSchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="27" column="66" lean-forward="false" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/PageReviewSubmit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPastRecordPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPageFeedback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientFutureRecordPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="72" lean-forward="false" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentSubmit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentConfirm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-          <folding>
-            <element signature="e#384#385#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" column="50" lean-forward="false" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageFeedback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageMasterSelection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="34" column="98" lean-forward="false" selection-start-line="34" selection-start-column="98" selection-end-line="34" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/Query.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/PagePath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/ConstantWorkHour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/impl/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/impl/ClientServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="49" column="61" lean-forward="false" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/impl/MasterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/impl/FeedbackServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/impl/LanguageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/impl/ProcedureServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/impl/RecordServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/impl/ScheduleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/FeedbackService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/LanguageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/ProcedureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/RecordService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/ScheduleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/general/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/adminPageMasters.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="111" column="54" lean-forward="false" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
       <provider editor-type-id="ResourceBundle">
         <state />
@@ -1371,7 +1058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="925">
           <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1382,7 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-875">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1390,7 +1075,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-25">
           <caret line="113" column="77" lean-forward="false" selection-start-line="113" selection-start-column="77" selection-end-line="113" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1398,15 +1082,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="114" column="77" lean-forward="false" selection-start-line="114" selection-start-column="77" selection-end-line="114" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/feedback.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
+        <state relative-caret-position="2700">
           <caret line="108" column="55" lean-forward="false" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,63 +1096,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="25" column="45" lean-forward="false" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/client/make-appointment-confirm.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="650">
           <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/master/masterSchedule.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
+        <state relative-caret-position="2250">
           <caret line="90" column="112" lean-forward="false" selection-start-line="90" selection-start-column="112" selection-end-line="90" selection-end-column="112" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/authorization.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
+        <state relative-caret-position="1075">
           <caret line="43" column="166" lean-forward="false" selection-start-line="43" selection-start-column="166" selection-end-line="43" selection-end-column="166" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="1800">
           <caret line="72" column="61" lean-forward="false" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="89" lean-forward="false" selection-start-line="13" selection-start-column="89" selection-end-line="13" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/servlet/MainServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/admin-feedback.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2575">
-          <caret line="103" column="20" lean-forward="true" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1478,6 +1131,319 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2125">
           <caret line="85" column="86" lean-forward="false" selection-start-line="85" selection-start-column="86" selection-end-line="85" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/admin-feedback.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="56" column="118" lean-forward="false" selection-start-line="56" selection-start-column="77" selection-end-line="56" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="84" lean-forward="true" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/container/ConstantWorkHour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageFeedback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageMasterSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/admin/AdminPageRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+          <folding>
+            <element signature="e#345#346#0" expanded="false" />
+            <element signature="e#405#406#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentConfirm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientAppointmentSubmit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientFutureRecordPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPageFeedback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/ClientPastRecordPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/client/PageReviewSubmit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/Registration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/container/PagePath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/master/MasterPageSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/Authorization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/filter/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="71" column="68" lean-forward="false" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/filter/NoCacheFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/filter/RegistrationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/listener/ContextListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/servlet/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/LanguageJdbcDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <marker date="1565708004218" expanded="true" signature="1125:1170" ph="select * fro... language_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/FeedbackJdbcDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-429">
+          <caret line="53" column="33" lean-forward="true" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+          <folding>
+            <marker date="1565763539632" expanded="true" signature="738:866" ph="INSERT INTO feedback_table... " />
+            <marker date="1565763539632" expanded="true" signature="1826:1872" ph="SELECT * FRO... feedback_table" />
+            <marker date="1565763539632" expanded="true" signature="2598:2644" ph="SELECT * FRO... feedback_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/JdbcFactoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="48" column="51" lean-forward="false" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/ProcedureJdbcDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2050">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <marker date="1565763539647" expanded="true" signature="2127:2178" ph="select * fro... procedure_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/ScheduleJdbcDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-447">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <marker date="1565712407533" expanded="true" signature="1274:1335" ph="select * fro... schedule_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/UserJdbcDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2075">
+          <caret line="93" column="43" lean-forward="false" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
+          <folding>
+            <marker date="1565763539569" expanded="true" signature="665:764" ph="insert into `user_table`... " />
+            <marker date="1565763539569" expanded="true" signature="2531:2570" ph="select * fro... user_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/RecordJdbcDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2625">
+          <caret line="115" column="30" lean-forward="false" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
+          <folding>
+            <marker date="1565718172432" expanded="true" signature="668:773" ph="INSERT INTO record_table... " />
+            <marker date="1565718172432" expanded="true" signature="3425:3462" ph="SELECT * FRO... record_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/impl/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/impl/MasterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/user/impl/ClientServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/command/impl/Logout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log/application.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1572,5 +1538,9 @@
         </settings>
       </state>
     </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="install" />
   </component>
 </project>

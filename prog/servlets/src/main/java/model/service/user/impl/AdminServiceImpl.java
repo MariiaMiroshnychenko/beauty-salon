@@ -33,6 +33,19 @@ public class AdminServiceImpl implements AdminService {
                 ));
     }
 
+    private void setRecordsParameters(List<Record> recordsForDay, String language) {
+        UserService userService = new UserServiceImpl();
+        ProcedureService procedureService = new ProcedureServiceImpl();
+        LanguageService languageService = new LanguageServiceImpl();
+
+        recordsForDay.forEach(record -> record.setMaster(userService.findUserById(record.getMasterId())));
+
+        recordsForDay.forEach(record ->
+                record.setProcedure(procedureService.findProcedureByCodeAndLanguageId(
+                        procedureService.findProcedureById(record.getProcedureId()).getCode(),
+                        languageService.findLanguageByLocale(language).getId())));
+    }
+
     @Override
     public List<Feedback> feedbackForMaster(Integer masterId, String language) {
         FeedbackService feedbackService = new FeedbackServiceImpl();
@@ -67,19 +80,6 @@ public class AdminServiceImpl implements AdminService {
         }
 
         return recordMap;
-    }
-
-    public void setRecordsParameters(List<Record> recordsForDay, String language) {
-        UserService userService = new UserServiceImpl();
-        ProcedureService procedureService = new ProcedureServiceImpl();
-        LanguageService languageService = new LanguageServiceImpl();
-
-        recordsForDay.forEach(record -> record.setMaster(userService.findUserById(record.getMasterId())));
-
-        recordsForDay.forEach(record ->
-                record.setProcedure(procedureService.findProcedureByCodeAndLanguageId(
-                        procedureService.findProcedureById(record.getProcedureId()).getCode(),
-                        languageService.findLanguageByLocale(language).getId())));
     }
 }
 
